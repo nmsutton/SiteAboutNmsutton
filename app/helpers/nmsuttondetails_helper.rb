@@ -1,0 +1,2 @@
+module NmsuttondetailsHelper
+end

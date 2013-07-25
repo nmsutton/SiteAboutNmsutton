@@ -1,0 +1,2 @@
+class NmsuttondetailsController < ApplicationController
+end
