@@ -1,0 +1,23 @@
+
+<style>
+	div
+{
+transform:rotate(30deg);
+-ms-transform:rotate(30deg); /* IE 9 */
+-webkit-transform:rotate(30deg); /* Safari and Chrome */
+}
+</style>
+
+<script>
+function ChangeOpacity() {
+for (i = 0;i<1.0;i=1+0.1) {
+setTimeout(function () {$(".MenuOption").css({opacity:i});}, 500);
+}
+}
+
+</script>
+
+<div style="position:absolute; left:50px; top:50px; width:200px; height:200px;background-color: blue">test</div>
+<div class="MenuOption" style="position:absolute; left:100px; top:100px; width:200px; height:200px; opacity:0.5; background-color: red">test</div>
+
+<a href="javascript:ChangeOpacity()">Change opacity</a>
