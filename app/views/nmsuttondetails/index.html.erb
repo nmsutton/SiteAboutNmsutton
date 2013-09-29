@@ -9,111 +9,234 @@
 		<%= stylesheet_link_tag    "templatemo_style", :media => "all" %>
 		<%= javascript_include_tag "jquery.min", "slimbox2" %>
 		<%= csrf_meta_tags %>
-		<meta name="keywords" content="nightlight, free template, pink, purple, templatemo, html css" />
-		<meta name="description" content="NightLight is a free template from templatemo." />
-
-		<script language="javascript" type="text/javascript">
-			function clearText(field) {
-				if (field.defaultValue == field.value)
-					field.value = '';
-				else if (field.value == '')
-					field.value = field.defaultValue;
-			}
-		</script>
 
 	</head>
 	<body>
 
+		<div id="spacer"></div>
+		<div id="canvasContainer">
+			<canvas id="myCanvas" width="100px" height="800px"></canvas>
+		</div>
 
-		<div id="templatemo_body_wrapper">
-			<div id="templatemo_wrapper">
-				<div id="templatemo_header">
-					<div id="site_title">
-						<a href="http://www.templatemo.com/preview/templatemo_373_nightlight">NightLight Free Template</a>
-					</div>
-					<div class="col_4 right">
-						<a href="https://www.facebook.com/templatemo"><img src="templatemo_facebook.png" alt="Facebook" /></a>
-						<a href="#"><img src="templatemo_google.png" alt="Google" /></a>
-						<a href="#"><img src="templatemo_skype.png" alt="Skype" /></a>
-						<a href="#"><img src="templatemo_twitter.png" alt="Twitter" /></a>
-					</div>
-				</div>
-				<div id="templatemo_menu">
-					<ul>
-						<li>
-							<a href="index.html" class="selected">Home</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="gallery.html">Gallery</a>
-						</li>
-						<li>
-							<a href="news.html">News</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact</a>
-						</li>
-					</ul>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			var rectWidth = 150;
+			var rectHeight = 75;
+			//ctx.fillStyle = "#FF00FF";
+			//ctx.fillRect(0, 0, 100, 800);
+			//ctx.translate(c.width / 2, c.height / 2);
+			//$("#myCanvas").css({BackgroundImage:'url(/assets/home-button2.gif)'});
+			//var imageObj = new Image();
+			//imageObj.onload = function() {
+			//	ctx.drawImage(imageObj, 0, 0, 93, 104);
+			//};
+			//imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+			//$("#myCanvas").css({WebkitTransform:'rotate3d(1,0,0,60deg)'});
+			//ctx.fillRect(rectWidth / -2, rectHeight / -2, rectWidth, rectHeight);
+			//ctx.clearRect(0, 0, c.width, c.height);
 
-					<div id="templatemo_search">
-						<form action="#" method="get">
-							<input type="text" value="Search" name="keyword" id="keyword" title="keyword"
-							onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
-						</form>
-					</div>
-				</div>
-				<div id="templatemo_middle">
-					<div class="rounded-corners outer-shadows" style="behavior: url(border-radius.htc);min-height:50px;min-width:50px;max-width:150px;background-color:#424242;border:5px solid #000A75;"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="templatemo_main">
-					<div class="col_2 left">
-						<h2>Welcome Page</h2>
-						<img class="img_border img_nom" src="templatemo_image_01.jpg" alt="image" />
-						<p>
-							<em>Ut ut est sed velit gravida dapibus. Ut aliquam, felis ac malesuada aliquet, eros purus pellentesque nisl, vel convallis lacus nunc ornare lacus.</em>
-						</p>
-						<p align="justify">
-							Nightlight template is provided by <a href="http://www.templatemo.com" target="_parent">templatemo</a> for anyone. This layout can be applied for your websites. Credits go to <a href="http://www.wpzoom.com" target="_blank">wpzoom</a> for icons, <a href="http://www.freedesign4.me/vectors/free-vector-party-girls/" target="_blank">freedesign4.me</a> and <a href="http://www.vectorvaco.com">VectorVaco</a> for vectors used in this template. Curabitur rutrum, turpis in pretium sodales, mauris arcu lobortis velit, sit amet convallis sem nisl non elit. Sed auctor risus et purus bibendum ornare. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow">XHTML</a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow">CSS</a>.
-						</p>
-						<a href="#" class="more">More</a>
-					</div>
+			// Old shape rotate
+			/*
+			$(document).ready(function() {
+			$('#myCanvas').mousemove(function(event) {
+			cx = Math.ceil($('body').width() / 2.0);
+			cy = Math.ceil($('body').height() / 2.0);
+			dx = event.pageX - cx;
+			dy = event.pageY - cy;
 
-					<div class="col_2 right">
-						<h2>Upcoming Events</h2>
-						<ul class="nobullet even_list">
-							<li>
-								<a href="#"> <span class="title">Curabitur sed est eget massa convallis posuere</span> <span class="date">Sep 25, 2072 - Sunday 11:00 PM</span> <span class="place">Donec molestie magna a tincidunt vehicula</span> </a>
-							</li>
-							<li>
-								<a href="#"> <span class="title">Mauris vel justo orci</span> <span class="date">Sep 24, 2072 - Saturday 9:30 PM</span> <span class="place">Ut ornare arcu vel arcu mattis malesuada</span> </a>
-							</li>
-							<li>
-								<a href="#"> <span class="title">Sagittis eget ullamcorper augue placerat</span> <span class="date">Sep 23, 2072 - Friday 11:30 PM</span> <span class="place">Vivamus accumsan lobortis lorem iaculis laoreet</span> </a>
-							</li>
-							<li>
-								<a href="#"> <span class="title">Fusce pretium urna vitae metus</span> <span class="date">Sep 22, 2072 - Thursday 10:45 PM</span> <span class="place">Phasellus commodo justo sit amet dictum consequat</span> </a>
-							</li>
-						</ul>
-						<a href="#" class="more">More</a>
-					</div>
+			tiltx = (dy / cy);
+			tilty = -(dx / cx);
+			radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2));
+			degree = (radius * .5);
 
-					<div class="clear"></div>
+			adjustedMouseX = event.pageX - 53;
+			adjustedMouseY = event.pageY - 10;
 
-				</div>
-				<div id="templatemo_footer">
-					<div class="col_2 left">
-						"Vivamus suscipit euismod lacus, et <a href="#">#volutpat</a> ipsum bibendum eget. Mauris vel justo orci" <a href="#">Follow us on Twitter</a>
-					</div>
-					<div class="col_2 right">
-						Copyright © 2072 <a href="#">Company Name</a>
-						<br />
-						<a href="http://www.templatemo.com/preview/templatemo_373_nightlight">NightLight</a> by <a href="http://www.templatemo.com">templatemo</a>
-					</div>
-				</div>
-			</div>
+			ctx.clearRect(0, 0, 100, 800);
+			ctx.fillStyle = "#FF00FF";
+			ctx.fillRect(0, 0, 100, 800);
+			ctx.fillStyle = "#00FFFF";
+			ctx.font = "12px Arial";
+			ctx.fillText(event.pageX + " " + event.pageY, 10, 50);
+			ctx.save();
+			ctx.fillStyle = "#FF0000";
+			//ctx.translate(60, 450);
+			//ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees.
+			//ctx.rotate(0.1);
+			//ctx.fillRect(10, 400, 80, 100);
+			var x = 10;
+			var y = 300;
+			var width = 80;
+			var height = 100;
+			var cx2 = x + 0.5 * width;
+			var cy2 = y + 0.5 * height;
+
+			ctx.translate(cx2, cy2);
+			//ctx.rotate((Math.PI / 180) * 25);
+			ctx.rotateY((Math.PI / 180) * adjustedMouseY);
+			//rotate 25 degrees.
+
+			ctx.fillStyle = "#0000ff";
+			ctx.fillRect(-0.5 * width, -0.5 * height, width, height);
+			ctx.restore();
+
+			//ctx.fillRect(adjustedMouseX, adjustedMouseY, adjustedMouseX + 50, adjustedMouseY + 300);
+			//$('.MenuOption').css({'webkit-transform':'rotateX('+event.pageY+'deg)'});
+			});
+			});
+			*/
+
+			// old html5 canvas shape moving
+			/*$(document).ready(function() {
+			$('body').mousemove(function(event) {
+			cx = Math.ceil($('body').width() / 2.0);
+			cy = Math.ceil($('body').height() / 2.0);
+			dx = event.pageX - cx;
+			dy = event.pageY - cy;
+
+			tiltx = (dy / cy);
+			tilty = - (dx / cx);
+			radius = Math.sqrt(Math.pow(tiltx,2) + Math.pow(tilty,2));
+			degree = (radius * 20)*3;
+
+			//$('#myCanvas').css('-webkit-transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
+			ctx.clearRect(0, 0, c.width, c.height);
+			//ctx.fillRect(dx, dy, rectWidth, rectHeight);
+			ctx.fillRect(dx, dy, dx+150, dy+75);
+			});
+			});*/
+
+			//$("#myCanvas").css({top:'300px'});
+			//ctx.rotate3d(0,0,1,45deg);
+		</script>
+
+		<div class="MainPageNavigationMenu">
+			<div id="container"></div>
+		</div>
+
+		<script src="http://www.html5canvastutorials.com/libraries/three.min.js"></script>
+		<script>
+			//<script defer="defer">
+			adjustedMouseX = 0;
+			adjustedMouseY = 0;
+			var canvasWidth = 100;
+			var canvasHeight = 800;
+
+			// revolutions per second
+			var angularSpeed = 0.2;
+			var lastTime = 0;
+
+			// this function is executed on each animation frame
+			function animate() {
+				// update
+				var time = (new Date()).getTime();
+				var timeDiff = time - lastTime;
+				var angleChange = angularSpeed * timeDiff * 2 * Math.PI / 1000;
+
+				/*$(document).ready(function() {
+				$('#myCanvas').mousemove(function(event) {
+				adjustedMouseX = event.pageX - 53;
+				adjustedMouseY = event.pageY - 10;
+				cube.rotation.y = adjustedMouseY;
+				}
+				}*/
+
+				//cube.rotation.y += angleChange;
+				lastTime = time;
+
+				// render
+				renderer.render(scene, camera);
+
+				// request new frame
+				requestAnimationFrame(function() {
+					animate();
+				});
+			}
+
+			// renderer
+			var renderer = new THREE.CanvasRenderer();
+			renderer.setSize(canvasWidth, canvasHeight);
+			document.body.appendChild(renderer.domElement);
+
+			// camera
+			var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 1, 1000);
+			camera.position.z = 900;
+
+			// scene
+			var scene = new THREE.Scene();
+
+			// cube
+			var cube1 = new THREE.Mesh(new THREE.CubeGeometry(50, 50, 50), new THREE.MeshNormalMaterial());
+			cube1.overdraw = true;
+			cube1.position.y = 300;
+			scene.add(cube1);
+
+			var cube2 = new THREE.Mesh(new THREE.CubeGeometry(50, 50, 50), new THREE.MeshNormalMaterial());
+			cube2.overdraw = true;
+			cube2.position.y = 150;
+			scene.add(cube2);
+
+			var cube3 = new THREE.Mesh(new THREE.CubeGeometry(50, 50, 50), new THREE.MeshNormalMaterial());
+			cube3.overdraw = true;
+			scene.add(cube3);
+
+			var cube4 = new THREE.Mesh(new THREE.CubeGeometry(50, 50, 50), new THREE.MeshNormalMaterial());
+			cube4.overdraw = true;
+			cube4.position.y = -150;
+			scene.add(cube4);
+
+			var cube5 = new THREE.Mesh(new THREE.CubeGeometry(50, 50, 50), new THREE.MeshNormalMaterial());
+			cube5.overdraw = true;
+			cube5.position.y = -300;
+			scene.add(cube5);
+
+			// start animation
+			animate();
+
+			/*$(document).ready(function() {
+			 $('#myCanvas').mousemove(function(event) {
+			 adjustedMouseX = event.pageX - 53;
+			 adjustedMouseY = event.pageY - 10;
+			 //cube.rotation.y = adjustedMouseY;
+
+			 // render
+			 //renderer.render(scene, camera);
+
+			 // request new frame
+			 requestAnimationFrame(function(){
+			 cube.rotation.y = adjustedMouseY;
+			 renderer.render(scene, camera);
+			 });
+			 }
+			 }*/
+
+			$(document).ready(function() {
+				$('#myCanvas').mousemove(function(event) {
+					adjustedMouseX = (event.pageX + 2 - 50) * 0.001;
+					adjustedMouseY = (event.pageY - 210 - 300) * 0.001;
+					cube1.rotation.x = adjustedMouseY;
+					cube1.rotation.y = adjustedMouseX;
+					adjustedMouseX = (event.pageX + 2 - 50) * 0.003;
+					adjustedMouseY = (event.pageY - 210 - 300) * 0.003;
+					cube2.rotation.x = adjustedMouseY;
+					cube2.rotation.y = adjustedMouseX;
+					adjustedMouseX = (event.pageX + 2 - 50) * 0.005;
+					adjustedMouseY = (event.pageY - 210 - 300) * 0.005;
+					cube3.rotation.x = adjustedMouseY;
+					cube3.rotation.y = adjustedMouseX;
+					adjustedMouseX = (event.pageX + 2 - 50) * 0.003;
+					adjustedMouseY = (event.pageY - 210 - 300) * 0.003;
+					cube4.rotation.x = adjustedMouseY;
+					cube4.rotation.y = adjustedMouseX;
+					adjustedMouseX = (event.pageX + 2 - 50) * 0.001;
+					adjustedMouseY = (event.pageY - 210 - 300) * 0.001;
+					cube5.rotation.x = adjustedMouseY;
+					cube5.rotation.y = adjustedMouseX;
+				})
+			})
+		</script>
+		</div>
 
 	</body>
 </html>
