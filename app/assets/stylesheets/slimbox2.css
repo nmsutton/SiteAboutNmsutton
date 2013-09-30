@@ -83,49 +83,45 @@
 }
 
 .MenuOption2 {
-		transform: rotate(30deg);
-		-ms-transform: rotate(30deg); /* IE 9 */
-		-webkit-transform: rotate(30deg); /* Safari and Chrome */
-		left: 0px;
-		top: 100px;
-	}
-	#canvasContainer {
-		position: absolute;
-		width: 100px;
-		height: 800px;
-		left: 0px;
-		top: 100px;
-		z-index: 1;
-	}
-	#MainPageNavigationMenu {
-			left: 0px;
-		top: 100px;
-		z-index: 2;
-	}
-	#test1 {
-	position:absolute;
-	top:0px;
-	left:0px;
-	}
-	
-	#templatemo_body_wrapper {
-	position:absolute;
-	top:0px;
-	left:0px;
-	}
-	
-	#spacer {
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg); /* IE 9 */
+	-webkit-transform: rotate(30deg); /* Safari and Chrome */
+	left: 0px;
+	top: 100px;
+}
+#myCanvas {
+	position: absolute;
+	width: 1050px;
+	height: 100px;
+	left: 25%;
+	top: 100px;
+	z-index: 1;
+}
+#MainPageNavigationMenu {
+	left: 400px;
+	top: 100px;
+	z-index: 2;
+}
+
+#templatemo_body_wrapper {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#spacer {
 	width: 100px;
-		height: 100px;
-	}
-	.rounded-corners {
-     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    border-radius: 10px;
+	height: 100px;
+	left: 400px;
+}
+.rounded-corners {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
 }
 .outer-shadows {
-/* outer shadows  (note the rgba is red, green, blue, alpha) */
--webkit-box-shadow: 0px 0px 48px rgba(0, 10, 117, 1.0); 
--moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+	/* outer shadows  (note the rgba is red, green, blue, alpha) */
+	-webkit-box-shadow: 0px 0px 48px rgba(0, 10, 117, 1.0);
+	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
 }
