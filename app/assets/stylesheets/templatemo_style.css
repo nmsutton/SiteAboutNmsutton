@@ -179,7 +179,7 @@ ol.number_list li a:hover {
 	background: url(templatemo_wrapper.png) top center no-repeat
 }
 #templatemo_wrapper {
-	width: 968px;
+	width: 75%;
 	margin: 0 auto;
 	padding: 0 10px;
 }
@@ -196,6 +196,7 @@ ol.number_list li a:hover {
 #templatemo_middle {
 	position:relative;
 	top:80px;
+	min-width:800px;
 	padding: 0 34px;
 	margin-bottom: 40px;
 }
@@ -552,10 +553,31 @@ ul.even_list li a span.place {
 	border: 1px solid #000
 }
 #TextBox {
+	position:relative;
+	margin:10px;
+	padding: 10px;
+	top:0px;
+	left:0px;
+	float:left;
 	behavior: url(border-radius.htc);
 	min-height:50px;
 	min-width:50px;
-	max-width:150px;
-	background-color:#424242;
+	max-width:28%;
+	/*background-color:#424242;*/
+	background-color:rgba(0,0,0,.5);
 	border:5px solid #000A75;
+	font-size: 24px;
+	line-height: 30px;
+	opacity:0.6;
+}
+#TextBoxHeader {
+	background-color:#000000;
+	padding: 6px;
+	text-align:center;
+	/*opacity:1.0;*/
+}
+#TextBoxBody {
+	position:relative;
+	top:10px;
+	/*opacity:1.0;*/
 }

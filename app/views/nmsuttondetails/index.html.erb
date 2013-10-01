@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<!--
 	References:
-	http://jonraasch.com/blog/css-rounded-corners-in-all-browsers -->
+	http://jonraasch.com/blog/css-rounded-corners-in-all-browsers
+	http://coryg.com/blog/rails/view-all-of-your-database-tables-in-rails/ -->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Site About NMSutton</title>
@@ -173,7 +174,15 @@
 
 					minX = (window.innerWidth * .355), maxX = (window.innerWidth * .45);
 					if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-						alert("test2");
+						$(location).attr('href', "http://nmsutton.github.io/Resume/NateSuttonResume.html");
+						
+					minX = (window.innerWidth * .455), maxX = (window.innerWidth * .55);
+					if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
+						$(location).attr('href', "https://github.com/nmsutton");
+					
+					minX = (window.innerWidth * .555), maxX = (window.innerWidth * .65);
+					if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
+						$(location).attr('href', "http://nmsutton.github.io/Resume/NateSuttonResume.html");
 				})
 			})
 		</script>
@@ -193,7 +202,13 @@
 				</div>
 
 				<div id="templatemo_middle">
-					<div class="rounded-corners outer-shadows" id="TextBox"></div>
+					<% Projects.all.each do |c| %>
+					<div class="rounded-corners outer-shadows" id="TextBox">
+						<div id="TextBoxHeader"><%= c.timeRange %></div>
+						<div id="TextBoxBody"><%= c.description %></div>
+						<br>
+					</div>
+					<% end %>
 					<div class="clear"></div>
 				</div>
 				<div id="templatemo_main">
@@ -209,39 +224,38 @@
 						<a href="#" class="more">More</a>
 					</div>
 
-					<div class="col_2 right">
-						<h2>Upcoming Events</h2>
-						<ul class="nobullet even_list">
-							<li>
-								<a href="#"> <span class="title">Curabitur sed est eget massa convallis posuere</span> <span class="date">Sep 25, 2072 - Sunday 11:00 PM</span> <span class="place">Donec molestie magna a tincidunt vehicula</span> </a>
-							</li>
-							<li>
-								<a href="#"> <span class="title">Mauris vel justo orci</span> <span class="date">Sep 24, 2072 - Saturday 9:30 PM</span> <span class="place">Ut ornare arcu vel arcu mattis malesuada</span> </a>
-							</li>
-							<li>
-								<a href="#"> <span class="title">Sagittis eget ullamcorper augue placerat</span> <span class="date">Sep 23, 2072 - Friday 11:30 PM</span> <span class="place">Vivamus accumsan lobortis lorem iaculis laoreet</span> </a>
-							</li>
-							<li>
-								<a href="#"> <span class="title">Fusce pretium urna vitae metus</span> <span class="date">Sep 22, 2072 - Thursday 10:45 PM</span> <span class="place">Phasellus commodo justo sit amet dictum consequat</span> </a>
-							</li>
-						</ul>
-						<a href="#" class="more">More</a>
-					</div>
-
-					<div class="clear"></div>
-
+					<h2>Upcoming Events</h2>
+					<ul class="nobullet even_list">
+						<li>
+							<a href="#"> <span class="title">Curabitur sed est eget massa convallis posuere</span> <span class="date">Sep 25, 2072 - Sunday 11:00 PM</span> <span class="place">Donec molestie magna a tincidunt vehicula</span> </a>
+						</li>
+						<li>
+							<a href="#"> <span class="title">Mauris vel justo orci</span> <span class="date">Sep 24, 2072 - Saturday 9:30 PM</span> <span class="place">Ut ornare arcu vel arcu mattis malesuada</span> </a>
+						</li>
+						<li>
+							<a href="#"> <span class="title">Sagittis eget ullamcorper augue placerat</span> <span class="date">Sep 23, 2072 - Friday 11:30 PM</span> <span class="place">Vivamus accumsan lobortis lorem iaculis laoreet</span> </a>
+						</li>
+						<li>
+							<a href="#"> <span class="title">Fusce pretium urna vitae metus</span> <span class="date">Sep 22, 2072 - Thursday 10:45 PM</span> <span class="place">Phasellus commodo justo sit amet dictum consequat</span> </a>
+						</li>
+					</ul>
+					<a href="#" class="more">More</a>
 				</div>
-				<div id="templatemo_footer">
-					<div class="col_2 left">
-						"Vivamus suscipit euismod lacus, et <a href="#">#volutpat</a> ipsum bibendum eget. Mauris vel justo orci" <a href="#">Follow us on Twitter</a>
-					</div>
-					<div class="col_2 right">
-						Copyright © 2072 <a href="#">Company Name</a>
-						<br />
-						<a href="http://www.templatemo.com/preview/templatemo_373_nightlight">NightLight</a> by <a href="http://www.templatemo.com">templatemo</a>
-					</div>
+
+				<div class="clear"></div>
+
+			</div>
+			<div id="templatemo_footer">
+				<div class="col_2 left">
+					"Vivamus suscipit euismod lacus, et <a href="#">#volutpat</a> ipsum bibendum eget. Mauris vel justo orci" <a href="#">Follow us on Twitter</a>
+				</div>
+				<div class="col_2 right">
+					Copyright © 2072 <a href="#">Company Name</a>
+					<br />
+					<a href="http://www.templatemo.com/preview/templatemo_373_nightlight">NightLight</a> by <a href="http://www.templatemo.com">templatemo</a>
 				</div>
 			</div>
+		</div>
 
 	</body>
 </html>

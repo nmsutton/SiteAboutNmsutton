@@ -1,0 +1,25 @@
+<h1>Tag Categories</h1>
+<br>
+<br>
+<script>
+	function processTagLink(TagName) {
+		$("#TagLinkName").val(TagName);
+		document.forms['TagLinkGroup'].submit();
+	}
+</script>
+<form action="/tag_navigator/tag_details" method="post" id='TagLinkGroup'>
+	<input id="TagLinkName" name="TagLinkName" type="hidden" />
+	<% for tagCategoryEntryIndex in (0..@TagCategoryList.length - 1) %>
+	<div class="rounded-corners outer-shadows" id="TextBox">
+		<div id="TextBoxHeader">
+			<%= @TagCategoryList[tagCategoryEntryIndex][0] %>
+		</div>
+		<% for tagEntryIndex in (1..@TagCategoryList[tagCategoryEntryIndex].length - 1) %>
+		<div id="TextBoxBody">
+			<%= link_to @TagCategoryList[tagCategoryEntryIndex][tagEntryIndex], "javascript:processTagLink(\'"+@TagCategoryList[tagCategoryEntryIndex][tagEntryIndex]+"\')", :class => "button" %>
+
+		</div>
+		<% end %>
+	</div>
+	<% end %>
+</form>

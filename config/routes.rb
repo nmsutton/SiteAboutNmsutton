@@ -1,4 +1,6 @@
 SiteAboutNMSutton::Application.routes.draw do
+  get "tag_navigator/tag_navigator"
+
   get "nmsuttondetails/index"
 
   # The priority is based upon order of creation:
@@ -57,4 +59,6 @@ SiteAboutNMSutton::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  
+  match ':controller/:action' => 'tag_details#send'
 end
