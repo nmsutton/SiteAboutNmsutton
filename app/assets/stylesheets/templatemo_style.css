@@ -552,17 +552,18 @@ ul.even_list li a span.place {
 	background: #282828;
 	border: 1px solid #000
 }
-#TextBox {
+#TextBox, .TagRelevantWorkDescription {
 	position:relative;
 	margin:10px;
 	padding: 10px;
 	top:0px;
 	left:0px;
-	float:left;
+	display:inline-block;
 	behavior: url(border-radius.htc);
 	min-height:50px;
 	min-width:50px;
-	max-width:28%;
+	margin-left:auto;
+	margin-right:auto;
 	/*background-color:#424242;*/
 	background-color:rgba(0,0,0,.5);
 	border:5px solid #000A75;
@@ -580,4 +581,9 @@ ul.even_list li a span.place {
 	position:relative;
 	top:10px;
 	/*opacity:1.0;*/
+}
+.TagRelevantWorkDescription {	
+	position:relative;
+	min-width:200px;
+	max-width:90%;
 }

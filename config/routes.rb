@@ -1,4 +1,6 @@
 SiteAboutNMSutton::Application.routes.draw do
+  get "projects/projects"
+
   get "tag_navigator/tag_navigator"
 
   get "nmsuttondetails/index"

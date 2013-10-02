@@ -1,0 +1,12 @@
+<% Projects.all.each do |c| %>
+<div class="rounded-corners outer-shadows" id="TextBox">
+	<div id="TextBoxHeader">
+		<%= c.timeRange %>
+	</div>
+	<div id="TextBoxBody">
+		<%= c.description %>
+	</div>
+	<br>
+</div>
+<% end %>
+<div class="clear"></div>

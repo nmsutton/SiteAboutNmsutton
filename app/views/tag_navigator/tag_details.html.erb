@@ -1,9 +1,38 @@
+<!--
+	References:
+	http://stackoverflow.com/questions/8814472/how-to-make-an-html-back-link
+	-->
 
-  Data: 
-  <%= $tagName %>
-  
-  <%= @ProjectsWithTag %>
-  
-  <br>
-  more:
-  <%= @WorkCategoryWithTag %>
+<h3>Selected Experience With <%= $tagName %></h3>
+<br>
+<br>
+<script>
+	function processTagLink(TagName) {
+		$("#TagLinkName").val(TagName);
+		document.forms['TagLinkGroup'].submit();
+	}
+	$( document ).ready(function() {
+	$("#test2").html("test3");
+	});
+</script>
+<a href="javascript:history.back()">Previous page</a>
+<p>
+	<% if @ProjectsWithTag.length > 0 then %>
+		<h3>Projects</h3>
+	<%= $RelevantProjectDescriptions %>
+	<% end %>
+</p>
+<p>
+	<% if @JobsWithTag.length > 0 then %>
+		<h3>Jobs</h3>
+	<%= $RelevantJobDescriptions %>
+	<% end %>
+</p>
+<p>
+	<% if @ClassesWithTag.length > 0 then %>
+		<h3>Classes</h3>
+	<%= $RelevantClassDescriptions %>
+	<% end %>
+</p>
+
+<div id="test2">test2</div>

@@ -7,6 +7,8 @@
 		document.forms['TagLinkGroup'].submit();
 	}
 </script>
+<a href="javascript:history.back()">Previous page</a>
+<br>
 <form action="/tag_navigator/tag_details" method="post" id='TagLinkGroup'>
 	<input id="TagLinkName" name="TagLinkName" type="hidden" />
 	<% for tagCategoryEntryIndex in (0..@TagCategoryList.length - 1) %>
@@ -17,7 +19,6 @@
 		<% for tagEntryIndex in (1..@TagCategoryList[tagCategoryEntryIndex].length - 1) %>
 		<div id="TextBoxBody">
 			<%= link_to @TagCategoryList[tagCategoryEntryIndex][tagEntryIndex], "javascript:processTagLink(\'"+@TagCategoryList[tagCategoryEntryIndex][tagEntryIndex]+"\')", :class => "button" %>
-
 		</div>
 		<% end %>
 	</div>

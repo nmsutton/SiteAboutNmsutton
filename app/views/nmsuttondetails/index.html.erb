@@ -3,12 +3,13 @@
 	<!--
 	References:
 	http://jonraasch.com/blog/css-rounded-corners-in-all-browsers
-	http://coryg.com/blog/rails/view-all-of-your-database-tables-in-rails/ -->
+	http://coryg.com/blog/rails/view-all-of-your-database-tables-in-rails/
+	http://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using -->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Site About NMSutton</title>
 		<%= stylesheet_link_tag    "application", :media => "all" %>
-		<%= javascript_include_tag "application" %>
+		<%= javascript_include_tag "main_page" %>
 		<%= csrf_meta_tags %>
 		<meta name="keywords" content="nightlight, free template, pink, purple, templatemo, html css" />
 		<meta name="description" content="NightLight is a free template from templatemo." />
@@ -170,19 +171,23 @@
 					mouseX = event.pageX;
 					minY = 120, maxY = 180, minX = (window.innerWidth * .25), maxX = (window.innerWidth * .35);
 					if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-						alert("test");
+						processNavBarLink('/projects/projects.html');
 
 					minX = (window.innerWidth * .355), maxX = (window.innerWidth * .45);
 					if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-						$(location).attr('href', "http://nmsutton.github.io/Resume/NateSuttonResume.html");
-						
+						processNavBarLink('/projects/projects.html');
+
 					minX = (window.innerWidth * .455), maxX = (window.innerWidth * .55);
 					if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-						$(location).attr('href', "https://github.com/nmsutton");
-					
+						processNavBarLink('/tag_navigator/tag_navigator.html');
+
 					minX = (window.innerWidth * .555), maxX = (window.innerWidth * .65);
 					if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-						$(location).attr('href', "http://nmsutton.github.io/Resume/NateSuttonResume.html");
+						processNavBarLink('/tag_navigator/tag_navigator.html');
+
+					minX = (window.innerWidth * .655), maxX = (window.innerWidth * .75);
+					if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
+						processNavBarLink('http://nmsutton.github.io/Resume/NateSuttonResume.html');
 				})
 			})
 		</script>
@@ -201,15 +206,8 @@
 					</div>
 				</div>
 
-				<div id="templatemo_middle">
-					<% Projects.all.each do |c| %>
-					<div class="rounded-corners outer-shadows" id="TextBox">
-						<div id="TextBoxHeader"><%= c.timeRange %></div>
-						<div id="TextBoxBody"><%= c.description %></div>
-						<br>
-					</div>
-					<% end %>
-					<div class="clear"></div>
+				<div id="templatemo_middle" name="templatemo_middle">
+					<iframe name="Stack" src="/projects/projects.html" width="100%" frameborder="0" scrolling="no" id="iframe" onload='javascript:resizeIframe(this);' />
 				</div>
 				<div id="templatemo_main">
 					<div class="col_2 left">
