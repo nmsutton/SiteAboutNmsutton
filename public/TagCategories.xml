@@ -1,0 +1,19 @@
+<?xml version= "1.0"?>
+<root>
+	<TagWithCategory>
+		<Category>Operating Systems</Category>
+		<Tag>Linux</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Operating Systems</Category>
+		<Tag>Windows</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development</Category>
+		<Tag>HTML</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development</Category>
+		<Tag>Web Services</Tag>
+	</TagWithCategory>
+</root>

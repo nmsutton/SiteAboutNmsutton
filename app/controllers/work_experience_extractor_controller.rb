@@ -1,13 +1,16 @@
 # references:
 # http://stackoverflow.com/questions/9336039/get-link-and-href-text-from-html-doc-with-nokogiri-ruby
-
 class WorkExperienceExtractorController < ApplicationController
   def ExtractExperienceSections
     filePath = "public/NateSuttonResume.xml"
+    tagCategoriesFilePath = "public/TagCategories.xml"
 
     processWorkExperienceDocument(filePath)
+    processTagCategoriesDocument(tagCategoriesFilePath)
 
-    extractTags(Projects, "projects")
+    extractTags(Projects, "projects", TagsInProjects)
+    extractTags(Jobs, "jobs", TagsInJobs)
+    extractTags(Classes, "classes", TagsInClasses)
   end
 
   def processWorkExperienceDocument(filePath)
@@ -15,76 +18,63 @@ class WorkExperienceExtractorController < ApplicationController
     @jobDescriptions = []
     @classDescriptions = []
 
-    retreiveProjectText = false
-    retreiveJobText = false
-    retreiveClassText = false
-
     f = File.open(filePath)
     @doc = Nokogiri::XML(f)
     @projectDescriptions = @doc.xpath('//Project').map do |i|
-  {'timeRange' => i.xpath('TimeRange/text()'), 'description' => i.xpath('Description/text()')}
-  end
-    f.close
-
-    #resumeFile = XmlSimple.xml_in(filePath)
-    #resumeFile['Resume'].each do |resumeCategories|
-    #  resumeCategories.each do |category|
-    #    if (category == 'Projects') |ProjectsEntry|
-    #      @projectDescriptions << ProjectsEntry[0].split(/\t/)
-    #    end
-    #  end
-    #end
-
-    #IO.foreach(filePath) do |line|
-    #  line = line.chomp
-    #
-    #  if (retreiveProjectText == true)
-    #    @projectDescriptions << line.split(/\t/)
-    #  elsif (retreiveJobText == true)
-    #    @jobDescriptions << line.split(/\t/)
-    #  elsif (retreiveClassText == true)
-    #    @classDescriptions << line.split(/\t/)
-    #  end
-    #
-    #  retreiveProjectText = extractSection('Detailed Education and Research Experience', line, retreiveProjectText)
-    #  retreiveJobText = extractSection('Work Experience', line, retreiveJobText)
-    #  retreiveClassText = extractSection('Related Classes', line, retreiveClassText)
-    #end
-
-    batch = []
-    @projectDescriptions.each do |row|
-      batch << Projects.new(:timeRange => row['timeRange'].text, :description => row['description'].text)
-      $test2 = row['timeRange']
+      {:time_range => i.xpath('TimeRange/text()').text, :description => i.xpath('Description/text()').text}
     end
-    Projects.import batch
+    @jobDescriptions = @doc.xpath('//WorkEntry').map do |i|
+      {:time_range => i.xpath('TimeRange/text()').text, :description => i.xpath('Description/text()').text}
+    end
+    @classDescriptions = @doc.xpath('//Class').map do |i|
+      {:time_range => i.xpath('TimeRange/text()').text, :description => i.xpath('Description/text()').text}
+    end    
+    f.close
+    
+    storeDataInDatabase(@projectDescriptions, Projects, :time_range, :description)
+    storeDataInDatabase(@jobDescriptions, Jobs, :time_range, :description)
+    storeDataInDatabase(@classDescriptions, Classes, :time_range, :description)
+  end
+  
+  def processTagCategoriesDocument(filePath)
+    @tagCategoriesDescriptions = []
 
+    f = File.open(filePath)
+    @doc = Nokogiri::XML(f)
+    @tagCategoriesDescriptions = @doc.xpath('//TagWithCategory').map do |i|
+      {:tagCategory => i.xpath('Category/text()').text, :tagName => i.xpath('Tag/text()').text}
+    end
+    f.close
+    
+    storeDataInDatabase(@tagCategoriesDescriptions, TagCategories, :tagCategory, :tagName)
   end
 
-  def extractSection(sectionDescription, line, toggle)
-    if (toggle == true)
-      if (line == "")
-      toggle = false
+  def storeDataInDatabase(sectionDescriptions, table, columnA, columnB)
+    rowGroup = []
+    sectionDescriptions.each do |row|
+      unless table.exists?(columnA => row[columnA], columnB => row[columnB])
+        rowGroup << table.new(columnA => row[columnA], columnB => row[columnB])
       end
     end
-    if (line == sectionDescription)
-    toggle = true
+    if (rowGroup != nil)
+      table.import rowGroup
     end
-    return toggle
   end
 
-  def extractTags(rubyWorkCategoryTable, dbWorkCategoryTable)
+  def extractTags(rubyWorkCategoryTable, dbWorkCategoryTable, workCategoryWithTagsTable)
     @tags= []
     @tags = TagCategories.find_by_sql(['select distinct(tagName) from tag_categories']);
     @tagsInWorkCategory = []
-    $test = []
 
     @tags.each do |tag|
       @workCategoryIDsWithTag = []
-      @workCategoryIDsWithTag = rubyWorkCategoryTable.find_by_sql(['select ID from '+dbWorkCategoryTable+' where description regexp \'.*'+tag.tagName+'.*\'']);
+      @workCategoryIDsWithTag = rubyWorkCategoryTable.find_by_sql(['select id from '+dbWorkCategoryTable+' where description regexp \'.*'+tag.tagName+'.*\'']);
       @workCategoryIDsWithTag.each do |workCategoryID|
-      #Code for inputting id and tag into category_with_id table
-        $test << [workCategoryID, tag]
+        @tagsInWorkCategory << {:workSectionID => workCategoryID.id, :tagName => tag.tagName}
+        $test7 = @tags
       end
     end
+    
+    storeDataInDatabase(@tagsInWorkCategory, workCategoryWithTagsTable, :workSectionID, :tagName)
   end
 end

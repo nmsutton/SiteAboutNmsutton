@@ -12,11 +12,26 @@
 		<Degree>Bachelor of Science in Biology, 2005</Degree>
 	</Education>
 	<Work>
-		<WorkEntry>January 2011 - August 2011	Research Assistant at Arizona State University, Pheonix, Az, Java programming using original code, open source programs, and reimplemented programs for a project which researched automatic extraction of text descriptions of gene and drug interactions.  A large science article database was automatically processed to extract and randomly select sentences containing genes and drugs.  Open source modules were integrated including JDom for XML, a database API, and English language processing tools.  The software was optimized for statistical analyses with an open source machine learning tool.  Lead and trained a team of coworkers to generate datasets used in the project, the work was refined over time based on coworker feedback.  The work was published in a science conference at http://www.aclweb.org/anthology/W12-2427</WorkEntry>
-		<WorkEntry>May 2010 - October 2010	Web developer at Arizona State University, Phoenix, Az, Java Constructed a science conference website with html, css, and graphics design. The site integrated web applications from Google and Zoho.com and included a registration payment system. Included features such as user form input conversion to email and file repository.</WorkEntry>
-		<WorkEntry>April 2010 - May 2010	Java Software Developer at Arizona State University, Phoenix, Az, Contributed to a genetic microarray image analysis program using Java and Support Vector Graphics. Optimizations were found for efficiently batch processing the datasets that were used. Image data matrices were processed for pattern recognition and the results included image output.</WorkEntry>
-		<WorkEntry>August 2006 - June 2009	Biological Lab Technician at Cord Blood Registry, Tucson, Az</WorkEntry>
-		<WorkEntry>March 2006 - August 2006	Civil Engineering Lab Technician at Speedie and Associates, Phoenix, Az</WorkEntry>
+		<WorkEntry>
+			<TimeRange>January 2011 - August 2011</TimeRange>
+			<Description>Research Assistant at Arizona State University, Pheonix, Az, Java programming using original code, open source programs, and reimplemented programs for a project which researched automatic extraction of text descriptions of gene and drug interactions.  A large science article database was automatically processed to extract and randomly select sentences containing genes and drugs.  Open source modules were integrated including JDom for XML, a database API, and English language processing tools.  The software was optimized for statistical analyses with an open source machine learning tool.  Lead and trained a team of coworkers to generate datasets used in the project, the work was refined over time based on coworker feedback.  The work was published in a science conference at http://www.aclweb.org/anthology/W12-2427</Description>
+		</WorkEntry>
+		<WorkEntry>
+			<TimeRange>May 2010 - October 2010</TimeRange>
+			<Description>Web developer at Arizona State University, Phoenix, Az, Java Constructed a science conference website with html, css, and graphics design. The site integrated web applications from Google and Zoho.com and included a registration payment system. Included features such as user form input conversion to email and file repository.</Description>
+		</WorkEntry>
+		<WorkEntry>
+			<TimeRange>April 2010 - May 2010</TimeRange>
+			<Description>Java Software Developer at Arizona State University, Phoenix, Az, Contributed to a genetic microarray image analysis program using Java and Support Vector Graphics. Optimizations were found for efficiently batch processing the datasets that were used. Image data matrices were processed for pattern recognition and the results included image output.</Description>
+		</WorkEntry>
+		<WorkEntry>
+			<TimeRange>August 2006 - June 2009</TimeRange>
+			<Description>Biological Lab Technician at Cord Blood Registry, Tucson, Az</Description>
+		</WorkEntry>
+		<WorkEntry>
+			<TimeRange>March 2006 - August 2006</TimeRange>
+			<Description>Civil Engineering Lab Technician at Speedie and Associates, Phoenix, Az</Description>
+		</WorkEntry>
 	</Work>
 	<Projects>
 		<Project>
@@ -67,10 +82,24 @@
 	<PersonalProjects>Programming contributions have been made to the Biopython project. My previous and ongoing work can be found at https://github.com/nmsutton and biopython.org.
 		Built a web application at http://geneticanalyzer-bioinform.rhcloud.com/
 		Developed a web site with DHtml, Perl, CGI, and custom graphic design. The site used original Perl code for forums, personal profiles, and user activity record keeping. The site is offline now but I have a copy of it.</PersonalProjects>
-	<Classes>2009	C++ and Object Oriented Programming: Programming skills learned included classes, modular programming, exception handling, overloaded functions, and templates.
-		2009	C Programming: Subjects included the standard C library, scope, and multi-dimension arrays.
-		2010	Information Systems Engineering: Topics included information technology, data modeling, data organization, database engineering, applications such as decision support systems.
-		2010	Problem Solving in Biomedical Informatics: Concepts, methods, and techniques of software engineering were taught. A class project was done in Java on a plug-in for a microarray analysis tool.</Classes>
+	<Classes>
+		<Class>
+			<TimeRange>2009</TimeRange>
+			<Description>C++ and Object Oriented Programming: Programming skills learned included classes, modular programming, exception handling, overloaded functions, and templates.</Description>
+		</Class>
+		<Class>
+			<TimeRange>2009</TimeRange>
+			<Description>C Programming: Subjects included the standard C library, scope, and multi-dimension arrays.</Description>
+		</Class>
+		<Class>
+			<TimeRange>2010</TimeRange>
+			<Description>Information Systems Engineering: Topics included information technology, data modeling, data organization, database engineering, applications such as decision support systems.</Description>
+		</Class>
+		<Class>
+			<TimeRange>2010</TimeRange>
+			<Description>Problem Solving in Biomedical Informatics: Concepts, methods, and techniques of software engineering were taught. A class project was done in Java on a plug-in for a microarray analysis tool.</Description>
+		</Class>
+	</Classes>
 	<ComputerSkills>Languages:	Java, Python, Perl, C++, C, Ruby, Html, Java Script, XML, R, Briefly MatLab.
 		Software:	Eclipse, Netbeans, Visual Studio Express, MS Office including VBA
 		Databases:	MySQL, Access

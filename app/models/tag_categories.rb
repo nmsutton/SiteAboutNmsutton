@@ -1,3 +1,3 @@
 class TagCategories < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :tagCategory, :tagName
 end
