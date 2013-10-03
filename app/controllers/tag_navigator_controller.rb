@@ -32,7 +32,7 @@ class TagNavigatorController < ApplicationController
     @DescriptionsOfWorkCategoryWithTag = []
     @WorkCategoryWithTag.each do |workCategoryDetails|
       @DescriptionEntry = []
-      @DescriptionEntry << rubyGroupTable.find_by_sql(['select timeRange from '+dbGroupTable+' where id = ?', workCategoryDetails.id ]);
+      @DescriptionEntry << rubyGroupTable.find_by_sql(['select time_range from '+dbGroupTable+' where id = ?', workCategoryDetails.id ]);
       @DescriptionEntry << rubyGroupTable.find_by_sql(['select description from '+dbGroupTable+' where id = ?', workCategoryDetails.id ]);
       @DescriptionsOfWorkCategoryWithTag << @DescriptionEntry
     end
@@ -47,7 +47,7 @@ $textBoxFormatting << "<form action='/tag_navigator/tag_details' method='post' i
   for tagCategoryEntryIndex in (0..workCategoryDetails.length - 1)
   $textBoxFormatting << "<div class='rounded-corners outer-shadows TagRelevantWorkDescription'>
     <div id='TextBoxHeader'>"
-      $textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][0][0].timeRange
+      $textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][0][0].time_range
     $textBoxFormatting << "</div>"
     for tagEntryIndex in (1..workCategoryDetails[tagCategoryEntryIndex].length - 1)
     $textBoxFormatting << "<div id='TextBoxBody'>"

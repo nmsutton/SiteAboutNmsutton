@@ -1,21 +1,11 @@
 <h1>WorkExperienceExtractor#ExtractExperienceSections</h1>
 <p>Find me in app/views/work_experience_extractor/ExtractExperienceSections.html.erb</p>
 <br>
-File:
-<%= @projectDescriptions[0]['timeRange'] %>
 <br>
+<h1>Update work experience records</h1>
+<input type="text" value="public/NateSuttonResume.xml" id="workExperienceRecords"></input>
 <br>
+<%= link_to "Submit", :controller => "work_experience_extractor", :action => processWorkExperienceDocument('public/NateSuttonResume.xml') %>
 <br>
+<h1>Update work tags and tag categories</h1>
 <br>
-<%= @jobDescriptions %>
-<br>
-<br>
-<br>
-<br>
-<%= @classDescriptions %>
-<br>
-<br>
-<br>
-<br>
-test7
-<%= $test7 %>

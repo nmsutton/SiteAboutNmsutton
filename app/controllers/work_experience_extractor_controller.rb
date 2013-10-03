@@ -4,13 +4,6 @@ class WorkExperienceExtractorController < ApplicationController
   def ExtractExperienceSections
     filePath = "public/NateSuttonResume.xml"
     tagCategoriesFilePath = "public/TagCategories.xml"
-
-    processWorkExperienceDocument(filePath)
-    processTagCategoriesDocument(tagCategoriesFilePath)
-
-    extractTags(Projects, "projects", TagsInProjects)
-    extractTags(Jobs, "jobs", TagsInJobs)
-    extractTags(Classes, "classes", TagsInClasses)
   end
 
   def processWorkExperienceDocument(filePath)
@@ -47,6 +40,10 @@ class WorkExperienceExtractorController < ApplicationController
     f.close
     
     storeDataInDatabase(@tagCategoriesDescriptions, TagCategories, :tagCategory, :tagName)
+
+    extractTags(Projects, "projects", TagsInProjects)
+    extractTags(Jobs, "jobs", TagsInJobs)
+    extractTags(Classes, "classes", TagsInClasses)
   end
 
   def storeDataInDatabase(sectionDescriptions, table, columnA, columnB)
