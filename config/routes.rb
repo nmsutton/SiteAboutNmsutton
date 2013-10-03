@@ -1,4 +1,6 @@
 SiteAboutNMSutton::Application.routes.draw do
+  get "tag_details/tag_details"
+
   get "work_experience_extractor/ExtractExperienceSections"
 
   get "projects/projects"
@@ -64,5 +66,7 @@ SiteAboutNMSutton::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   
-  match ':controller/:action' => 'tag_details#send'
+
+  
+  match '/tag_navigator/tag_details' => 'tag_details#tag_details'
 end

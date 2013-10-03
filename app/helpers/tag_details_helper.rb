@@ -1,0 +1,2 @@
+module TagDetailsHelper
+end
