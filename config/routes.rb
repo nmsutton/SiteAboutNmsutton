@@ -1,4 +1,6 @@
 SiteAboutNMSutton::Application.routes.draw do
+  get "work_experience_extractor/ExtractExperienceSections"
+
   get "projects/projects"
 
   get "tag_navigator/tag_navigator"

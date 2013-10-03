@@ -1,0 +1,81 @@
+<?xml version= "1.0"?>
+<root>
+	<Header>
+		<Name>Nate Sutton</Name>
+		<Contact>Very willing to relocate for job opportunities, currently in AZ. Email: Awjnonq421005@gmail.com</Contact>
+	</Header>
+	<Objective>To work as a software developer.</Objective>
+	<Education>
+		<School>Arizona State University, Phoenix AZ 85004</School>
+		<Degree>Master’s of Science in Biomedical Informatics, 2012, GPA 3.98/4.00</Degree>
+		<School>Quinnipiac University, Hamden CT 06518</School>
+		<Degree>Bachelor of Science in Biology, 2005</Degree>
+	</Education>
+	<Work>
+		<WorkEntry>January 2011 - August 2011	Research Assistant at Arizona State University, Pheonix, Az, Java programming using original code, open source programs, and reimplemented programs for a project which researched automatic extraction of text descriptions of gene and drug interactions.  A large science article database was automatically processed to extract and randomly select sentences containing genes and drugs.  Open source modules were integrated including JDom for XML, a database API, and English language processing tools.  The software was optimized for statistical analyses with an open source machine learning tool.  Lead and trained a team of coworkers to generate datasets used in the project, the work was refined over time based on coworker feedback.  The work was published in a science conference at http://www.aclweb.org/anthology/W12-2427</WorkEntry>
+		<WorkEntry>May 2010 - October 2010	Web developer at Arizona State University, Phoenix, Az, Java Constructed a science conference website with html, css, and graphics design. The site integrated web applications from Google and Zoho.com and included a registration payment system. Included features such as user form input conversion to email and file repository.</WorkEntry>
+		<WorkEntry>April 2010 - May 2010	Java Software Developer at Arizona State University, Phoenix, Az, Contributed to a genetic microarray image analysis program using Java and Support Vector Graphics. Optimizations were found for efficiently batch processing the datasets that were used. Image data matrices were processed for pattern recognition and the results included image output.</WorkEntry>
+		<WorkEntry>August 2006 - June 2009	Biological Lab Technician at Cord Blood Registry, Tucson, Az</WorkEntry>
+		<WorkEntry>March 2006 - August 2006	Civil Engineering Lab Technician at Speedie and Associates, Phoenix, Az</WorkEntry>
+	</Work>
+	<Projects>
+		<Project>
+			<TimeRange>10/09 - 11/09, 01/10 - 04/10</TimeRange>
+			<Description>Worked on a tool for automating science experiments using Apache Tomcat, Html, the Liferay web portal, CSS, and briefly Java including servlets with MySql and PostgreSQL.</Description>
+		</Project>
+		<Project>
+			<TimeRange>02/10 - 03/10</TimeRange>
+			<Description>Compiled a genetic pattern recognition program from source code in Linux and worked with that to perform population genetics research.  Advanced statistics were learned for the work.</Description>
+		</Project>
+		<Project>
+			<TimeRange>03/10 - 06/10</TimeRange>
+			<Description>Worked on a project using Javascript, Java, and html to graphically show population genetics statistics.  Graphical presentations of underlying statistics were dynamically generated in web pages.</Description>
+		</Project>
+		<Project>
+			<TimeRange>03/10 - 05/10</TimeRange>
+			<Description>Used MySQL and Visual Basic for Applications on Excel to create an interactive report of genomic disease association analyses.</Description>
+		</Project>
+		<Project>
+			<TimeRange>07/10, 10/10 - 12/10</TimeRange>
+			<Description>Installed and tested in Linux next generation sequencing software on a local computer and remote cluster computing machine.</Description>
+		</Project>
+		<Project>
+			<TimeRange>08/10 - 09/10</TimeRange>
+			<Description>Performed database management of genome sequences using MySQL.  Created sequence alignment analyses using private and public databases.</Description>
+		</Project>
+		<Project>
+			<TimeRange>08/10 - 12/10</TimeRange>
+			<Description>Created a plug-in in Java for a genetic analysis workbench program.  A Java GUI was created to allow user interaction with the program.  The program interfaced with a web utility API for collection of scientific literature data.</Description>
+		</Project>
+		<Project>
+			<TimeRange>12/10 - 04/11</TimeRange>
+			<Description>Used Java and Perl to manipulate portions of genetic sequences for genetic transcription factor research.  XML was processed in Java using JDom for drug reaction research.  Data from multiple public databases were utilized and a variety of open source programs were integrated into the research.</Description>
+		</Project>
+		<Project>
+			<TimeRange>04/11 - 06/11</TimeRange>
+			<Description>Public databases were analyzed using Java to create comparisons of disease studies' results.  MySQL queries were used to map genetic regions to each other.  Advanced queries were performed using SQL.  Processing was done to compare data from multiple databases together.</Description>
+		</Project>
+		<Project>
+			<TimeRange>08/12</TimeRange>
+			<Description>Java was used to contribute to a project on extracting relationships between entities in medical records.  A combination of open source Java code and original programming was used.</Description>
+		</Project>
+		<Project>
+			<TimeRange>06/11 - 08/12</TimeRange>
+			<Description>Worked in text mining where programs were created or reimplemented in Java for the identification of text in scientific articles describing genes and drugs interacting together.</Description>
+		</Project>
+	</Projects>
+	<PersonalProjects>Programming contributions have been made to the Biopython project. My previous and ongoing work can be found at https://github.com/nmsutton and biopython.org.
+		Built a web application at http://geneticanalyzer-bioinform.rhcloud.com/
+		Developed a web site with DHtml, Perl, CGI, and custom graphic design. The site used original Perl code for forums, personal profiles, and user activity record keeping. The site is offline now but I have a copy of it.</PersonalProjects>
+	<Classes>2009	C++ and Object Oriented Programming: Programming skills learned included classes, modular programming, exception handling, overloaded functions, and templates.
+		2009	C Programming: Subjects included the standard C library, scope, and multi-dimension arrays.
+		2010	Information Systems Engineering: Topics included information technology, data modeling, data organization, database engineering, applications such as decision support systems.
+		2010	Problem Solving in Biomedical Informatics: Concepts, methods, and techniques of software engineering were taught. A class project was done in Java on a plug-in for a microarray analysis tool.</Classes>
+	<ComputerSkills>Languages:	Java, Python, Perl, C++, C, Ruby, Html, Java Script, XML, R, Briefly MatLab.
+		Software:	Eclipse, Netbeans, Visual Studio Express, MS Office including VBA
+		Databases:	MySQL, Access
+		OS:	 Windows, Linux
+		Books Read:	Object-Oriented Programming in Java, Data Structures and Algorithms in Java, Python Programming, Why’s Ruby Guide, Ruby on Rails
+		Now Reading:Clean code, Expert Python Programming</ComputerSkills>
+	<Activities>Participating in a Software Engineering book club at Gangplank in Arizona. Participated in the Bioscience Ethics Club at Arizona State University.</Activities>
+</root>

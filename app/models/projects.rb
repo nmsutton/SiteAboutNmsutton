@@ -1,3 +1,3 @@
 class Projects < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :timeRange, :description
 end

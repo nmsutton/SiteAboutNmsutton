@@ -43,3 +43,7 @@ gem 'therubyracer'
 gem 'mysql2'
 
 gem 'activerecord-mysql-adapter'
+
+gem "activerecord-import"
+
+gem "nokogiri"
