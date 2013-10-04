@@ -40,7 +40,7 @@ renderer.setSize(canvasWidth, canvasHeight);
 document.body.appendChild(renderer.domElement);
 
 // camera
-var camera = new THREE.PerspectiveCamera(50, (canvasWidth * .1) / canvasHeight, 1, 1000);
+var camera = new THREE.PerspectiveCamera(50, Math.pow(canvasWidth, .72) / canvasHeight, 1, 1000);
 camera.position.z = 400;
 
 // scene
@@ -102,24 +102,14 @@ animate();
 
 $(document).ready(function() {
 	$('#myCanvas').mousemove(function(event) {
-		//adjustedMouseX = (event.pageX + xRotation) * 0.001;
-		//adjustedMouseY = (event.pageY + yRotation) * 0.001;
 		cube1.rotation.x = (event.pageY - cube1AdjustedMouseX) * (xRotation * 0.001);
 		cube1.rotation.y = (event.pageX - cube1AdjustedMouseY) * (yRotation * 0.001);
-		//adjustedMouseX = (event.pageX + xRotation) * 0.003;
-		//adjustedMouseY = (event.pageY + yRotation) * 0.003;
 		cube2.rotation.x = (event.pageY - cube2AdjustedMouseX) * (xRotation * 0.001);
 		cube2.rotation.y = (event.pageX - cube2AdjustedMouseY) * (yRotation * 0.001);
-		//adjustedMouseX = (event.pageX + xRotation) * 0.005;
-		//adjustedMouseY = (event.pageY + yRotation) * 0.005;
 		cube3.rotation.x = (event.pageY - cube3AdjustedMouseX) * (xRotation * 0.001);
 		cube3.rotation.y = (event.pageX - cube3AdjustedMouseY) * (yRotation * 0.001);
-		//adjustedMouseX = (event.pageX + xRotation) * 0.003;
-		//adjustedMouseY = (event.pageY + yRotation) * 0.003;
 		cube4.rotation.x = (event.pageY - cube4AdjustedMouseX) * (xRotation * 0.001);
 		cube4.rotation.y = (event.pageX - cube4AdjustedMouseY) * (yRotation * 0.001);
-		//adjustedMouseX = (event.pageX + xRotation) * 0.001;
-		//adjustedMouseY = (event.pageY + yRotation) * 0.001;
 		cube5.rotation.x = (event.pageY - cube5AdjustedMouseX) * (xRotation * 0.001);
 		cube5.rotation.y = (event.pageX - cube5AdjustedMouseY) * (yRotation * 0.001);
 	});
@@ -145,6 +135,13 @@ $(document).ready(function() {
 
 		minX = (window.innerWidth * .655), maxX = (window.innerWidth * .75);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-			processNavBarLink('http://nmsutton.github.io/Resume/NateSuttonResume.html');
+			processNavBarLink('NateSuttonResume.html');
 	});
 });
+
+$(window).resize(adjustMenu);
+
+function adjustMenu() {
+	var canvasWidth = window.innerWidth;
+	renderer.setSize(canvasWidth, canvasHeight);
+}

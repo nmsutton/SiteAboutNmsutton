@@ -1,29 +1,61 @@
 /* Reference: http://www.templatemo.com */
-
 body {
+margin-left:auto;
+margin-right:auto;
+text-align: center;
 	margin: 0;
 	padding: 0 0 20px 0;
 	color: #b9becd;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	line-height: 1.4em;
-	background-color: #1a1d25;
-	background-image: url(templatemo_body.png);
-	background-repeat: repeat
+	font-weight: normal;
+	text-decoration: none
+}
+a, a:hover {
+	color: #d2cb04;
+	text-decoration: none
 }
 
-#templatemo_wrapper {
-	position:relative;
-	width: 85%;
-	margin: 0 auto;
-	padding: 0 10px;
-	top:-200px;
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	font-weight: 400;
+	padding: 0;
+	margin: 0 0 10px 0;
 }
-#spacer {
-	width: 100px;
-	height: 100px;
-	left: 400px;
+
+h1 {
+	font-size: 34px;
+	margin-bottom: 25px;
+	line-height: 38px
 }
+h2 {
+	font-size: 26px;
+	margin-bottom: 25px;
+	line-height: 28px;
+}
+h3 {
+	font-size: 20px;
+	line-height: 24px
+}
+h4 {
+	font-size: 18px
+}
+h5 {
+	font-size: 16px
+}
+h6 {
+	font-size: 12px
+}
+
+#workExperienceRecords {
+	text-align: center;
+}
+
+#tagCategoryRecords {
+	text-align: center;
+}
+
 .rounded-corners {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -45,10 +77,11 @@ body {
 	behavior: url(border-radius.htc);
 	min-height:50px;
 	min-width:50px;
+	max-width:40%;
 	margin-left:auto;
 	margin-right:auto;
 	/*background-color:#424242;*/
-	background-color:rgba(0,0,0,.5);
+	background-color:rgba(0,0,0,.75);
 	border:5px solid #000A75;
 	font-size: 24px;
 	line-height: 30px;
@@ -69,28 +102,4 @@ body {
 	position:relative;
 	min-width:200px;
 	max-width:90%;
-}
-#nateSuttonImage {
-	position:relative;
-	top:-220px;
-	left:15%;
-}
-#githubLink {
-	position:relative;
-	top:-290px;
-	left:79%;
-}
-#backgroundWatermark {
-	position:absolute;
-	top:0;
-	left:0;
-	z-index: -100;
-}
-#myCanvas {
-	position: absolute;
-	width: 1400px;
-	height: 140px;
-	left: 25%;
-	top: 0px;
-	z-index: 1;
 }

@@ -1,5 +1,5 @@
 <head>
-	<%= stylesheet_link_tag    "templatemo_style", "slimbox2", :media => "all" %>
+	<%= stylesheet_link_tag    "middle_section_page", :media => "all" %>
 	<%= javascript_include_tag "application", "form_processing" %>
 </head>
 <body>
@@ -9,7 +9,7 @@
 		<br>
 <form action="/tag_navigator/tag_details" method="post" id='generalForm'>
 	<input id="parameterName" name="parameterName" type="hidden" />	
-	<%= @WorkCategory.all.each do |c| %>
+	<% @WorkCategory.all.each do |c| %>
 		<div class="rounded-corners outer-shadows" id="TextBox">
 		<div id="TextBoxHeader">
 			<%= c.time_range %>
@@ -26,4 +26,6 @@
 	</div>
 	<% end %>
 </form>
+<br>
+<h5><a href="javascript:history.back()">Previous page</a></h5>
 </body>

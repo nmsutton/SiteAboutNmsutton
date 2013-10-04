@@ -1,12 +1,11 @@
 <head>
-<%= stylesheet_link_tag    "templatemo_style", "slimbox2", :media => "all" %>
+<%= stylesheet_link_tag    "middle_section_page", :media => "all" %>
 <%= javascript_include_tag "form_processing" %>
 </head>
 <body>
 <h1>Tag Categories</h1>
 <br>
 <br>
-<a href="javascript:history.back()">Previous page</a>
 <br>
 <form action="/tag_navigator/tag_details" method="post" id='generalForm'>
 	<input id="parameterName" name="parameterName" type="hidden" />
@@ -23,4 +22,6 @@
 	</div>
 	<% end %>
 </form>
+<br>
+<h5><a href="javascript:history.back()">Previous page</a></h5>
 </body>
