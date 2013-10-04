@@ -1,8 +1,16 @@
+/* Nate Sutton
+ * Copyright 2013
+ * 
+ * This file contains specific javascript used on the main site page.
+ * The 3d Html5 nagivation menu is included.  THREE.js is a library
+ * used to help construct the menu.
+ */
+
 function processNavBarLink(url) {
 	$("#iframe").attr('src', url);
 }
 
-//<script defer="defer">
+// general 3d object parameters
 xRotation = 4.0;
 yRotation = 1.0;
 var canvasWidth = window.innerWidth;
@@ -11,26 +19,15 @@ cubesWidth = 30;
 cubesHeight = 100;
 cubesDepth = 10;
 
-// revolutions per second
-var angularSpeed = 0.2;
-var lastTime = 0;
-
 // this function is executed on each animation frame
-function animate() {
-	// update
-	var time = (new Date()).getTime();
-	var timeDiff = time - lastTime;
-	var angleChange = angularSpeed * timeDiff * 2 * Math.PI / 1000;
-
-	//cube.rotation.y += angleChange;
-	lastTime = time;
+function refreshRendering() {
 
 	// render
 	renderer.render(scene, camera);
 
 	// request new frame
 	requestAnimationFrame(function() {
-		animate();
+		refreshRendering();
 	});
 }
 
@@ -97,8 +94,8 @@ cube5AdjustedMouseX = 50;
 cube5AdjustedMouseY = (window.innerWidth);
 scene.add(cube5);
 
-// start animation
-animate();
+// start refreshing the rendering
+refreshRendering();
 
 $(document).ready(function() {
 	$('#myCanvas').mousemove(function(event) {
