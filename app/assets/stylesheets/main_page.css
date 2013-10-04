@@ -74,12 +74,14 @@ body {
 	position:relative;
 	top:-220px;
 	left:15%;
+	text-decoration: none;
 }
 #githubLink {
 	position:relative;
 	top:-290px;
 	left:79%;
 	z-index: 2;
+	text-decoration: none;
 }
 #backgroundWatermark {
 	position:absolute;
