@@ -16,7 +16,7 @@
 	<h3>Update work experience records</h3>
 	<br>
 	<form action="/work_experience_extractor/process_work_experience_document" method="post" id='workExperienceSubmission'>
-		<input type="text" size=50 value="public/NateSuttonResume.xml" id="workExperienceRecords" name="workExperienceRecords" disabled="yes" />
+		<input type="text" size=50 value="public/NateSuttonResume.xml" id="workExperienceRecords" name="workExperienceRecords" readonly/>
 		<br>
 		<br>
 		<a href="javascript:document.forms['workExperienceSubmission'].submit()">Submit</a>
@@ -27,7 +27,7 @@
 	<h3>Update work tags and tag categories</h3>
 	<br>
 	<form action="/work_experience_extractor/process_tag_categories_document" method="post" id='tagCategoriesSubmission'>
-		<input type="text" size=50 value="public/TagCategories.xml" id="tagCategoryRecords" name="tagCategoryRecords" disabled="yes" />
+		<input type="text" size=50 value="public/TagCategories.xml" id="tagCategoryRecords" name="tagCategoryRecords" readonly/>
 		<br>
 		<br>
 		<a href="javascript:document.forms['tagCategoriesSubmission'].submit()">Submit</a>

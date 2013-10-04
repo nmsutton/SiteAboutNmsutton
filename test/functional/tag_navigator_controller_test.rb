@@ -5,5 +5,4 @@ class TagNavigatorControllerTest < ActionController::TestCase
     get :tag_navigator
     assert_response :success
   end
-
 end
