@@ -20,12 +20,12 @@ class TagDetailsController < ApplicationController
 
   def getWorkDetails(rubyGroupTable, dbGroupTable, rubyTagAndGroupTable, dbTagAndGroupTable, tag)
     @WorkCategoryWithTag = []
-    @WorkCategoryWithTag = rubyTagAndGroupTable.find_by_sql(['select id from '+dbTagAndGroupTable+' where tagName = ?', tag ]);
+    @WorkCategoryWithTag = rubyTagAndGroupTable.find_by_sql(['select workSectionID from '+dbTagAndGroupTable+' where tagName = ?', tag ]);
     @DescriptionsOfWorkCategoryWithTag = []
     @WorkCategoryWithTag.each do |workCategoryDetails|
       @DescriptionEntry = []
-      @DescriptionEntry << rubyGroupTable.find_by_sql(['select time_range from '+dbGroupTable+' where id = ?', workCategoryDetails.id ]);
-      @DescriptionEntry << rubyGroupTable.find_by_sql(['select description from '+dbGroupTable+' where id = ?', workCategoryDetails.id ]);
+      @DescriptionEntry << rubyGroupTable.find_by_sql(['select time_range from '+dbGroupTable+' where id = ?', workCategoryDetails.workSectionID ]);
+      @DescriptionEntry << rubyGroupTable.find_by_sql(['select description from '+dbGroupTable+' where id = ?', workCategoryDetails.workSectionID ]);
       @DescriptionsOfWorkCategoryWithTag << @DescriptionEntry
     end
 
