@@ -1,3 +1,10 @@
+# Nate Sutton
+# Copyright 2013
+#
+# Individual pages are generated for each work category.  The pages are automatically
+# populated by the corresponding sections in the database.  All stored content for the
+# categories can be quickly reviewed
+#
 class WorkCategoryContentController < ApplicationController
   def choose_work_category
   end
