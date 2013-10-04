@@ -133,7 +133,7 @@ $(document).ready(function() {
 
 		minX = (window.innerWidth * .355), maxX = (window.innerWidth * .45);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-			processNavBarLink('/projects/projects.html');
+			processNavBarLink('/work_category_content/choose_work_category.html');
 
 		minX = (window.innerWidth * .455), maxX = (window.innerWidth * .55);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)

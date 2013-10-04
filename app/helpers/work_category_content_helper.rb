@@ -1,0 +1,2 @@
+module WorkCategoryContentHelper
+end

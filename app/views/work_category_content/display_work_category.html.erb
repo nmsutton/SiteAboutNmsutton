@@ -1,0 +1,29 @@
+<head>
+	<%= stylesheet_link_tag    "templatemo_style", "slimbox2", :media => "all" %>
+	<%= javascript_include_tag "application", "form_processing" %>
+</head>
+<body>
+	<br>
+	<h1>Selected Work on <%= @workCategoryKeyword %></h1>
+		<br>
+		<br>
+<form action="/tag_navigator/tag_details" method="post" id='generalForm'>
+	<input id="parameterName" name="parameterName" type="hidden" />	
+	<%= @WorkCategory.all.each do |c| %>
+		<div class="rounded-corners outer-shadows" id="TextBox">
+		<div id="TextBoxHeader">
+			<%= c.time_range %>
+		</div>
+		<div id="TextBoxBody">
+			<% processedDescription = c.description %>
+			<% @UniqueTags.each do |tagListEntry| %>
+			  <% processedDescription.sub!(Regexp.new(tagListEntry.tagName, Regexp::IGNORECASE), 
+			  "<a href=\"javascript:processTagLink('"+tagListEntry.tagName+"')\">"+tagListEntry.tagName+"</a>") %> 
+			<% end %>
+			<%= processedDescription.html_safe %>
+		</div>
+		<br>
+	</div>
+	<% end %>
+</form>
+</body>

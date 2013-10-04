@@ -16,4 +16,20 @@
 		<Category>Web Development</Category>
 		<Tag>Web Services</Tag>
 	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Programming Languages</Category>
+		<Tag>Python</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Programming Languages</Category>
+		<Tag>Ruby</Tag>
+	</TagWithCategory>	
+	<TagWithCategory>
+		<Category>Programming Languages</Category>
+		<Tag>Perl</Tag>
+	</TagWithCategory>	
+	<TagWithCategory>
+		<Category>Programming Languages</Category>
+		<Tag>Java</Tag>
+	</TagWithCategory>	
 </root>

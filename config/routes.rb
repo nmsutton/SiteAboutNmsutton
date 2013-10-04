@@ -1,9 +1,11 @@
 SiteAboutNMSutton::Application.routes.draw do
+  get "work_category_content/choose_work_category"
+
+  get "work_category_content/display_work_category"
+
   get "tag_details/tag_details"
 
   get "work_experience_extractor/ExtractExperienceSections"
-
-  get "projects/projects"
 
   get "tag_navigator/tag_navigator"
 
@@ -71,4 +73,10 @@ SiteAboutNMSutton::Application.routes.draw do
   match '/work_experience_extractor/process_work_experience_document' => 'work_experience_extractor#processWorkExperienceDocument'
   
   match '/work_experience_extractor/process_tag_categories_document' => 'work_experience_extractor#processTagCategoriesDocument'
+  
+  match '/work_category_content/projects' => 'work_category_content#projects'
+  
+  match '/work_category_content/jobs' => 'work_category_content#jobs'
+  
+  match '/work_category_content/classes' => 'work_category_content#classes'
 end
