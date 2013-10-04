@@ -70,12 +70,12 @@ body {
 	min-width:200px;
 	max-width:90%;
 }
-#nateSuttonImage, a {
+#nateSuttonImage {
 	position:relative;
 	top:-220px;
 	left:15%;
 }
-#githubLink, a {
+#githubLink {
 	position:relative;
 	top:-290px;
 	left:79%;
@@ -87,8 +87,7 @@ body {
 	left:0;
 	z-index: -100;
 }
-a:hover, a:visited, a:link, a:active
-{
+a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
 #myCanvas {
