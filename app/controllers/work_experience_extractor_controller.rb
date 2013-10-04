@@ -6,7 +6,9 @@ class WorkExperienceExtractorController < ApplicationController
     tagCategoriesFilePath = "public/TagCategories.xml"
   end
 
-  def processWorkExperienceDocument(filePath)
+  def processWorkExperienceDocument
+    filePath = params[:workExperienceRecords]
+    
     @projectDescriptions = []
     @jobDescriptions = []
     @classDescriptions = []
@@ -27,9 +29,13 @@ class WorkExperienceExtractorController < ApplicationController
     storeDataInDatabase(@projectDescriptions, Projects, :time_range, :description)
     storeDataInDatabase(@jobDescriptions, Jobs, :time_range, :description)
     storeDataInDatabase(@classDescriptions, Classes, :time_range, :description)
+    
+    render '/work_experience_extractor/ExtractExperienceSections.html'
   end
   
-  def processTagCategoriesDocument(filePath)
+  def processTagCategoriesDocument
+    filePath = params[:tagCategoryRecords]
+    
     @tagCategoriesDescriptions = []
 
     f = File.open(filePath)
@@ -44,6 +50,8 @@ class WorkExperienceExtractorController < ApplicationController
     extractTags(Projects, "projects", TagsInProjects)
     extractTags(Jobs, "jobs", TagsInJobs)
     extractTags(Classes, "classes", TagsInClasses)
+    
+    render '/work_experience_extractor/ExtractExperienceSections.html'
   end
 
   def storeDataInDatabase(sectionDescriptions, table, columnA, columnB)

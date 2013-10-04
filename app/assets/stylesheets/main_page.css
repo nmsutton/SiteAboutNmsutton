@@ -1,0 +1,96 @@
+/* Reference: http://www.templatemo.com */
+
+body {
+	margin: 0;
+	padding: 0 0 20px 0;
+	color: #b9becd;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	line-height: 1.4em;
+	background-color: #1a1d25;
+	background-image: url(templatemo_body.png);
+	background-repeat: repeat
+}
+
+#templatemo_wrapper {
+	position:relative;
+	width: 75%;
+	margin: 0 auto;
+	padding: 0 10px;
+	top:-200px;
+}
+#spacer {
+	width: 100px;
+	height: 100px;
+	left: 400px;
+}
+.rounded-corners {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+.outer-shadows {
+	/* outer shadows  (note the rgba is red, green, blue, alpha) */
+	-webkit-box-shadow: 0px 0px 48px rgba(0, 10, 117, 1.0);
+	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+}
+#TextBox, .TagRelevantWorkDescription {
+	position:relative;
+	margin:10px;
+	padding: 10px;
+	top:0px;
+	left:0px;
+	display:inline-block;
+	behavior: url(border-radius.htc);
+	min-height:50px;
+	min-width:50px;
+	margin-left:auto;
+	margin-right:auto;
+	/*background-color:#424242;*/
+	background-color:rgba(0,0,0,.5);
+	border:5px solid #000A75;
+	font-size: 24px;
+	line-height: 30px;
+	opacity:0.6;
+}
+#TextBoxHeader {
+	background-color:#000000;
+	padding: 6px;
+	text-align:center;
+	/*opacity:1.0;*/
+}
+#TextBoxBody {
+	position:relative;
+	top:10px;
+	/*opacity:1.0;*/
+}
+.TagRelevantWorkDescription {	
+	position:relative;
+	min-width:200px;
+	max-width:90%;
+}
+#nateSuttonImage {
+	position:relative;
+	top:-220px;
+	left:15%;
+}
+#githubLink {
+	position:relative;
+	top:-290px;
+	left:79%;
+}
+#backgroundWatermark {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: -100;
+}
+#myCanvas {
+	position: absolute;
+	width: 1050px;
+	height: 140px;
+	left: 25%;
+	top: 0px;
+	z-index: 1;
+}

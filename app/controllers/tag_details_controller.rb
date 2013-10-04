@@ -1,6 +1,6 @@
 class TagDetailsController < ApplicationController
   def tag_details
-    $tagName = params[:TagLinkName]
+    $tagName = params[:parameterName]
 
     @ProjectsWithTag = getWorkDetails(Projects, 'projects', TagsInProjects, 'tags_in_projects', $tagName)
     @JobsWithTag = getWorkDetails(Jobs, 'jobs', TagsInJobs, 'tags_in_jobs', $tagName)

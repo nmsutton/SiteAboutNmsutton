@@ -246,16 +246,15 @@ ol.number_list li a:hover {
 
 /* header */
 #site_title {
-	float: left;
+	left: -200px;
 	width: 400px;
 }
 
 #site_title a {
-	display: block;
+	left: -200px;
 	width: 240px;
 	height: 110px;
 	margin: 0 auto;
-	background: url(nateSutton.png) no-repeat;
 	text-indent: -10000px
 }
 

@@ -1,11 +1,28 @@
-<h1>WorkExperienceExtractor#ExtractExperienceSections</h1>
-<p>Find me in app/views/work_experience_extractor/ExtractExperienceSections.html.erb</p>
-<br>
-<br>
-<h1>Update work experience records</h1>
-<input type="text" value="public/NateSuttonResume.xml" id="workExperienceRecords"></input>
-<br>
-<%= link_to "Submit", :controller => "work_experience_extractor", :action => processWorkExperienceDocument('public/NateSuttonResume.xml') %>
-<br>
-<h1>Update work tags and tag categories</h1>
-<br>
+<head>
+	<%= stylesheet_link_tag    "templatemo_style", "slimbox2", "extract_experience_sections" %>
+</head>
+<body>
+	<h1>Update Work Experience Records</h1>
+	<br>
+	<br>
+	<h3>Update work experience records</h3>
+	<br>
+	<form action="/work_experience_extractor/process_work_experience_document" method="post" id='workExperienceSubmission'>
+		<input type="text" size=50 value="public/NateSuttonResume.xml" id="workExperienceRecords" name="workExperienceRecords" />
+		<br>
+		<br>
+		<a href="javascript:document.forms['workExperienceSubmission'].submit()">Submit</a>
+	</form>
+	<br>
+    <br>
+	<br>
+	<h3>Update work tags and tag categories</h3>
+	<br>
+	<form action="/work_experience_extractor/process_tag_categories_document" method="post" id='tagCategoriesSubmission'>
+		<input type="text" size=50 value="public/TagCategories.xml" id="tagCategoryRecords" name="tagCategoryRecords" />
+		<br>
+		<br>
+		<a href="javascript:document.forms['tagCategoriesSubmission'].submit()">Submit</a>
+	</form>
+	<br>
+</body>

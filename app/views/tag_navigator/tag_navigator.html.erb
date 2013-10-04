@@ -1,16 +1,15 @@
+<head>
+<%= stylesheet_link_tag    "templatemo_style", "slimbox2", :media => "all" %>
+<%= javascript_include_tag "form_processing" %>
+</head>
+<body>
 <h1>Tag Categories</h1>
 <br>
 <br>
-<script>
-	function processTagLink(TagName) {
-		$("#TagLinkName").val(TagName);
-		document.forms['TagLinkGroup'].submit();
-	}
-</script>
 <a href="javascript:history.back()">Previous page</a>
 <br>
-<form action="/tag_navigator/tag_details" method="post" id='TagLinkGroup'>
-	<input id="TagLinkName" name="TagLinkName" type="hidden" />
+<form action="/tag_navigator/tag_details" method="post" id='generalForm'>
+	<input id="parameterName" name="parameterName" type="hidden" />
 	<% for tagCategoryEntryIndex in (0..@TagCategoryList.length - 1) %>
 	<div class="rounded-corners outer-shadows" id="TextBox">
 		<div id="TextBoxHeader">
@@ -24,3 +23,4 @@
 	</div>
 	<% end %>
 </form>
+</body>

@@ -65,8 +65,10 @@ SiteAboutNMSutton::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-  
 
-  
   match '/tag_navigator/tag_details' => 'tag_details#tag_details'
+  
+  match '/work_experience_extractor/process_work_experience_document' => 'work_experience_extractor#processWorkExperienceDocument'
+  
+  match '/work_experience_extractor/process_tag_categories_document' => 'work_experience_extractor#processTagCategoriesDocument'
 end
