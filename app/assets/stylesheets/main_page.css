@@ -87,8 +87,9 @@ body {
 	left:0;
 	z-index: -100;
 }
-a {
-	text-decoration: none;
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }
 #myCanvas {
 	position: absolute;
