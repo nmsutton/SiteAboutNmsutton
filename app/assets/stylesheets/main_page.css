@@ -79,6 +79,7 @@ body {
 	position:relative;
 	top:-290px;
 	left:79%;
+	z-index: 2;
 }
 #backgroundWatermark {
 	position:absolute;
@@ -88,7 +89,7 @@ body {
 }
 #myCanvas {
 	position: absolute;
-	width: 1400px;
+	width: 1050px;
 	height: 140px;
 	left: 25%;
 	top: 0px;

@@ -1,4 +1,6 @@
 SiteAboutNMSutton::Application.routes.draw do
+  get "welcome_page/welcome_page"
+
   get "work_category_content/choose_work_category"
 
   get "work_category_content/display_work_category"

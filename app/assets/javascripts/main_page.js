@@ -119,7 +119,7 @@ $(document).ready(function() {
 		mouseX = event.pageX;
 		minY = 60, maxY = 120, minX = (window.innerWidth * .25), maxX = (window.innerWidth * .35);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-			window.location.href = "http://nmsutton.heroku.com";
+			processNavBarLink('/welcome_page/welcome_page.html');
 
 		minX = (window.innerWidth * .355), maxX = (window.innerWidth * .45);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
