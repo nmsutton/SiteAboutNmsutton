@@ -70,13 +70,13 @@ body {
 	min-width:200px;
 	max-width:90%;
 }
-#nateSuttonImage {
+#nateSuttonImage, #nateSuttonImage a {
 	position:relative;
 	top:-220px;
 	left:15%;
 	text-decoration: none;
 }
-#githubLink {
+#githubLink, #githubLink a {
 	position:relative;
 	top:-290px;
 	left:79%;
