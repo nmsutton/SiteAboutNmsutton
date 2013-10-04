@@ -97,6 +97,9 @@ scene.add(cube5);
 // start refreshing the rendering
 refreshRendering();
 
+// Mouse movements over canvas are tracked and move cubes.  Ajustment variables are used for
+// adapting to where the canvas is positioned.  Mouse clicks on the canvas are also tracked
+// and if they are in cube regions they trigger links.
 $(document).ready(function() {
 	$('#myCanvas').mousemove(function(event) {
 		cube1.rotation.x = (event.pageY - cube1AdjustedMouseX) * (xRotation * 0.001);
@@ -134,11 +137,12 @@ $(document).ready(function() {
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
 			processNavBarLink('NateSuttonResume.html');
 	});
+	
+	
+	$(window).resize(adjustMenu);
+
+	function adjustMenu() {
+		var canvasWidth = window.innerWidth;
+		renderer.setSize(canvasWidth, canvasHeight);
+	}
 });
-
-$(window).resize(adjustMenu);
-
-function adjustMenu() {
-	var canvasWidth = window.innerWidth;
-	renderer.setSize(canvasWidth, canvasHeight);
-}
