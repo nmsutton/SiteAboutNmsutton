@@ -4,6 +4,9 @@
  * This file contains specific javascript used on the main site page.
  * The 3d Html5 nagivation menu is included.  THREE.js is a library
  * used to help construct the menu.
+ * 
+ * References:
+ * Html5canvastutorials.com
  */
 
 function processNavBarLink(url) {
@@ -99,7 +102,8 @@ refreshRendering();
 
 // Mouse movements over canvas are tracked and move cubes.  Ajustment variables are used for
 // adapting to where the canvas is positioned.  Mouse clicks on the canvas are also tracked
-// and if they are in cube regions they trigger links.
+// and if they are in cube regions they trigger links.  Window resize movements tigger
+// 3d menu resizing as well.
 $(document).ready(function() {
 	$('#myCanvas').mousemove(function(event) {
 		cube1.rotation.x = (event.pageY - cube1AdjustedMouseX) * (xRotation * 0.001);
