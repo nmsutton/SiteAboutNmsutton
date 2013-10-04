@@ -70,24 +70,25 @@ body {
 	min-width:200px;
 	max-width:90%;
 }
-#nateSuttonImage, #nateSuttonImage a {
+#nateSuttonImage, a {
 	position:relative;
 	top:-220px;
 	left:15%;
-	text-decoration: none;
 }
-#githubLink, #githubLink a {
+#githubLink, a {
 	position:relative;
 	top:-290px;
 	left:79%;
-	z-index: 2;
-	text-decoration: none;
+	z-index: 2;	
 }
 #backgroundWatermark {
 	position:absolute;
 	top:0;
 	left:0;
 	z-index: -100;
+}
+a {
+	text-decoration: none;
 }
 #myCanvas {
 	position: absolute;
