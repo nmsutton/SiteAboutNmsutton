@@ -15,21 +15,21 @@ ActiveRecord::Schema.define(:version => 20131003185607) do
 
   create_table "classes", :force => true do |t|
     t.string   "time_range"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "jobs", :force => true do |t|
     t.string   "time_range"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "projects", :force => true do |t|
     t.string   "time_range"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

@@ -2,7 +2,7 @@ class CreateProjects < ActiveRecord::Migration
   def up
     create_table :projects do |t|
       t.string :time_range
-      t.string :description
+      t.text :description
       
       t.timestamps      
     end
