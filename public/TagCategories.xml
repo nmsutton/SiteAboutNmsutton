@@ -17,19 +17,106 @@
 		<Tag>Web Services</Tag>
 	</TagWithCategory>
 	<TagWithCategory>
+		<Category>Web Development</Category>
+		<Tag>Apache</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development</Category>
+		<Tag>Tomcat</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development</Category>
+		<Tag>Liferay</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development</Category>
+		<Tag>CSS</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
 		<Category>Programming Languages</Category>
 		<Tag>Python</Tag>
 	</TagWithCategory>
 	<TagWithCategory>
 		<Category>Programming Languages</Category>
 		<Tag>Ruby</Tag>
-	</TagWithCategory>	
+	</TagWithCategory>
 	<TagWithCategory>
 		<Category>Programming Languages</Category>
 		<Tag>Perl</Tag>
-	</TagWithCategory>	
+	</TagWithCategory>
 	<TagWithCategory>
 		<Category>Programming Languages</Category>
 		<Tag>Java</Tag>
-	</TagWithCategory>	
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Databases</Category>
+		<Tag>MySQL</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Databases</Category>
+		<Tag>PostgreSQL</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Databases</Category>
+		<Tag>Access</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Java</Category>
+		<Tag>Servelets</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Java</Category>
+		<Tag>JSP</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Java</Category>
+		<Tag>JDBC</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Java</Category>
+		<Tag>JUnit</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Java</Category>
+		<Tag>JDom</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Programming Languages</Category>
+		<Tag>CPlusPlus</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Programming Languages</Category>
+		<Tag>Java Script</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development</Category>
+		<Tag>XML</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Statistics</Category>
+		<Tag>R Language</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Statistics</Category>
+		<Tag>Matlab</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Integrated Development Environments</Category>
+		<Tag>Eclipse</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Integrated Development Environments</Category>
+		<Tag>Netbeans</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Integrated Development Environments</Category>
+		<Tag>Visual Studio Express</Tag>
+	</TagWithCategory>
+	<Category>Productivity Tools</Category>
+	<Tag>MS Office</Tag>
+</TagWithCategory>
+<TagWithCategory>
+	<Category>Programming Languages</Category>
+	<Tag>VBA</Tag>
+</TagWithCategory>
 </root>
