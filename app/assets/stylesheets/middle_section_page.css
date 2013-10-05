@@ -5,7 +5,7 @@ margin-right:auto;
 text-align: center;
 	margin: 0;
 	padding: 0 0 20px 0;
-	color: #b9becd;
+	color: #c0c4d2;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	line-height: 1.4em;
@@ -80,23 +80,19 @@ h6 {
 	max-width:40%;
 	margin-left:auto;
 	margin-right:auto;
-	/*background-color:#424242;*/
-	background-color:rgba(0,0,0,.75);
+	background-color:rgba(0,0,0,.4);
 	border:5px solid #000A75;
 	font-size: 24px;
 	line-height: 30px;
-	opacity:0.6;
 }
 #TextBoxHeader {
 	background-color:#000000;
 	padding: 6px;
 	text-align:center;
-	/*opacity:1.0;*/
 }
 #TextBoxBody {
 	position:relative;
 	top:10px;
-	/*opacity:1.0;*/
 }
 .TagRelevantWorkDescription {	
 	position:relative;

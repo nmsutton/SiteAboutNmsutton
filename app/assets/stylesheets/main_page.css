@@ -3,7 +3,6 @@
 body {
 	margin: 0;
 	padding: 0 0 20px 0;
-	color: #b9becd;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	line-height: 1.4em;
@@ -12,7 +11,7 @@ body {
 	background-repeat: repeat
 }
 
-#templatemo_wrapper {
+#middle_page_region {
 	position:relative;
 	width: 85%;
 	margin: 0 auto;
@@ -47,7 +46,6 @@ body {
 	min-width:50px;
 	margin-left:auto;
 	margin-right:auto;
-	/*background-color:#424242;*/
 	background-color:rgba(0,0,0,.5);
 	border:5px solid #000A75;
 	font-size: 24px;
@@ -58,12 +56,10 @@ body {
 	background-color:#000000;
 	padding: 6px;
 	text-align:center;
-	/*opacity:1.0;*/
 }
 #TextBoxBody {
 	position:relative;
 	top:10px;
-	/*opacity:1.0;*/
 }
 .TagRelevantWorkDescription {	
 	position:relative;
