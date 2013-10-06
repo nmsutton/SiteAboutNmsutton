@@ -22,7 +22,7 @@
 		</div>
 		<% for tagEntryIndex in (1..@TagCategoryList[tagCategoryEntryIndex].length - 1) %>
 		<div id="TextBoxBody">
-			<%= link_to @TagCategoryList[tagCategoryEntryIndex][tagEntryIndex], "javascript:processTagLink(\'"+@TagCategoryList[tagCategoryEntryIndex][tagEntryIndex]+"\')", :class => "button" %>
+			<%= link_to @TagCategoryList[tagCategoryEntryIndex][tagEntryIndex], "javascript:processTagLink(\'"+@TagCategoryList[tagCategoryEntryIndex][tagEntryIndex]+"\')" %>
 		</div>
 		<% end %>
 	</div>

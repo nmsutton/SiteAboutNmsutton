@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131003185607) do
+ActiveRecord::Schema.define(:version => 20131006092937) do
 
   create_table "classes", :force => true do |t|
     t.string   "time_range"

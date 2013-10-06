@@ -1,3 +1,3 @@
-class Projects < ActiveRecord::Base
+class Job < ActiveRecord::Base
   attr_accessible :time_range, :description
 end

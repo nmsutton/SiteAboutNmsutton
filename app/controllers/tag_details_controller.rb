@@ -9,9 +9,9 @@ class TagDetailsController < ApplicationController
   def tag_details
     $tagName = params[:parameterName]
 
-    @ProjectsWithTag = getWorkDetails(Projects, 'projects', TagsInProjects, 'tags_in_projects', $tagName)
-    @JobsWithTag = getWorkDetails(Jobs, 'jobs', TagsInJobs, 'tags_in_jobs', $tagName)
-    @ClassesWithTag = getWorkDetails(Classes, 'classes', TagsInClasses, 'tags_in_classes', $tagName)
+    @ProjectsWithTag = getWorkDetails(Project, 'projects', TagsInProject, 'tags_in_projects', $tagName)
+    @JobsWithTag = getWorkDetails(Job, 'jobs', TagsInJob, 'tags_in_jobs', $tagName)
+    @ClassesWithTag = getWorkDetails(Classe, 'classes', TagsInClasse, 'tags_in_classes', $tagName)
 
     $RelevantProjectDescriptions = createTextBoxFormatting(@ProjectsWithTag)
     $RelevantJobDescriptions = createTextBoxFormatting(@JobsWithTag)
@@ -38,14 +38,16 @@ class TagDetailsController < ApplicationController
   #
   def createTextBoxFormatting(workCategoryDetails)
     $textBoxFormatting = ""
+    titleIndex = 0
+    queryResultIndex = 0;
     for tagCategoryEntryIndex in (0..workCategoryDetails.length - 1)
       $textBoxFormatting << "<div class='rounded-corners outer-shadows TagRelevantWorkDescription'>
       <div id='TextBoxHeader'>"
-      $textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][0][0].time_range
+      $textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][titleIndex][queryResultIndex].time_range
       $textBoxFormatting << "</div>"
       for tagEntryIndex in (1..workCategoryDetails[tagCategoryEntryIndex].length - 1)
         $textBoxFormatting << "<div id='TextBoxBody'>"
-        $textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][tagEntryIndex][0].description
+        $textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][tagEntryIndex][queryResultIndex].description
         $textBoxFormatting << "</div>"
       end
       $textBoxFormatting << "</div>"

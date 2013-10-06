@@ -15,9 +15,9 @@ class WorkCategoryContentController < ApplicationController
   def projects
     @workCategoryKeyword = 'Projects'
     
-    @UniqueTags = TagCategories.find_by_sql([ 'select distinct(tagName) from tag_categories' ]);
+    @UniqueTags = TagCategorie.find_by_sql([ 'select distinct(tagName) from tag_categories' ]);
     
-    @WorkCategory = Projects
+    @WorkCategory = Project
     
     render "/work_category_content/display_work_category.html"
   end
@@ -25,9 +25,9 @@ class WorkCategoryContentController < ApplicationController
   def jobs
     @workCategoryKeyword = 'Jobs'
     
-    @UniqueTags = TagCategories.find_by_sql([ 'select distinct(tagName) from tag_categories' ]);
+    @UniqueTags = TagCategorie.find_by_sql([ 'select distinct(tagName) from tag_categories' ]);
     
-    @WorkCategory = Jobs
+    @WorkCategory = Job
     
     render "/work_category_content/display_work_category.html"
   end
@@ -35,9 +35,9 @@ class WorkCategoryContentController < ApplicationController
   def classes
     @workCategoryKeyword = 'Classes'
     
-    @UniqueTags = TagCategories.find_by_sql([ 'select distinct(tagName) from tag_categories' ]);
+    @UniqueTags = TagCategorie.find_by_sql([ 'select distinct(tagName) from tag_categories' ]);
     
-    @WorkCategory = Classes
+    @WorkCategory = Classe
     
     render "/work_category_content/display_work_category.html"
   end

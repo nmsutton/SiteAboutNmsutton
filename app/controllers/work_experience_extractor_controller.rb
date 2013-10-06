@@ -35,9 +35,9 @@ class WorkExperienceExtractorController < ApplicationController
     end
     f.close
 
-    storeDataInDatabase(@projectDescriptions, Projects, :time_range, :description)
-    storeDataInDatabase(@jobDescriptions, Jobs, :time_range, :description)
-    storeDataInDatabase(@classDescriptions, Classes, :time_range, :description)
+    storeDataInDatabase(@projectDescriptions, Project, :time_range, :description)
+    storeDataInDatabase(@jobDescriptions, Job, :time_range, :description)
+    storeDataInDatabase(@classDescriptions, Classe, :time_range, :description)
 
     render '/work_experience_extractor/ExtractExperienceSections.html'
   end
@@ -54,11 +54,11 @@ class WorkExperienceExtractorController < ApplicationController
     end
     f.close
 
-    storeDataInDatabase(@tagCategoriesDescriptions, TagCategories, :tagCategory, :tagName)
+    storeDataInDatabase(@tagCategoriesDescriptions, TagCategorie, :tagCategory, :tagName)
 
-    extractTags(Projects, "projects", TagsInProjects)
-    extractTags(Jobs, "jobs", TagsInJobs)
-    extractTags(Classes, "classes", TagsInClasses)
+    extractTags(Project, "projects", TagsInProject)
+    extractTags(Job, "jobs", TagsInJob)
+    extractTags(Classe, "classes", TagsInClasse)
 
     render '/work_experience_extractor/ExtractExperienceSections.html'
   end
@@ -82,7 +82,7 @@ class WorkExperienceExtractorController < ApplicationController
   #
   def extractTags(rubyWorkCategoryTable, dbWorkCategoryTable, workCategoryWithTagsTable)
     @tags= []
-    @tags = TagCategories.find_by_sql(['select distinct(tagName) from tag_categories']);
+    @tags = TagCategorie.find_by_sql(['select distinct(tagName) from tag_categories']);
     @tagsInWorkCategory = []
 
     @tags.each do |tag|
