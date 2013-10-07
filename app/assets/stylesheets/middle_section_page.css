@@ -1,8 +1,8 @@
 /* Reference: http://www.templatemo.com */
 body {
-margin-left:auto;
-margin-right:auto;
-text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 	margin: 0;
 	padding: 0 0 20px 0;
 	color: #c0c4d2;
@@ -68,34 +68,91 @@ h6 {
 	-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
 }
 #TextBox, .TagRelevantWorkDescription {
-	position:relative;
-	margin:10px;
+	position: relative;
+	margin: 10px;
 	padding: 10px;
-	top:0px;
-	left:0px;
-	display:inline-block;
+	top: 0px;
+	left: 0px;
+	display: inline-block;
 	behavior: url(border-radius.htc);
-	min-height:50px;
-	min-width:50px;
-	max-width:40%;
-	margin-left:auto;
-	margin-right:auto;
-	background-color:rgba(0,0,0,.4);
-	border:5px solid #000A75;
+	min-height: 50px;
+	min-width: 50px;
+	max-width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0,0,0,.4);
+	border: 5px solid #000A75;
 	font-size: 24px;
 	line-height: 30px;
 }
 #TextBoxHeader {
-	background-color:#000000;
+	background-color: #000000;
 	padding: 6px;
-	text-align:center;
+	text-align: center;
 }
 #TextBoxBody {
-	position:relative;
-	top:10px;
+	position: relative;
+	top: 10px;
 }
-.TagRelevantWorkDescription {	
+.TextInBarRoundedBorder {
+	position: relative;
+	color: #FFFFFF;
+	font-family: Tahoma, Geneva, sans-serif;
+	top: 0px;
+	left: 0px;
+	font-size: 40px;
+	font-weight: 500;
+	padding: 15px 0px 0px 0px;
+	width: 70%;
+	height: 45px;
+	background-image: url(BlueBar.jpg);
+	overflow: hidden;
+	clear: both;
+	display: inline-block;
+	behavior: url(border-radius.htc);
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0,0,0,.4);
+	border: 2px solid #000000;
+	line-height: 30px;
+	-moz-border-radius: 60px;
+	-webkit-border-radius: 60px;
+	-khtml-border-radius: 60px;
+	border-radius: 60px;
+	background-color: #000000;
+	 -khtml-opacity:.70; 
+ -moz-opacity:.70; 
+ -ms-filter:"alpha(opacity=70)";
+  filter:alpha(opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.7);
+  opacity:.70; 
+}
+.SubHeaderTextInBar {
+	font-size: 27px;
+	width: 40%;
+	padding: 5px 0px 7px 0px;
+	height: 25px;
+}
+.GreenBar {
+	background-image: url(GreenBar.jpg);
+}
+.YellowBar {
+	background-image: url(YellowBar.jpg);
+}
+.TagRelevantWorkDescription {
+	position: relative;
+	min-width: 200px;
+	max-width: 90%;
+}
+.RectangleButton {
 	position:relative;
-	min-width:200px;
-	max-width:90%;
+	font-size: 130%;
+	border: 1px solid #454545;
+	padding: 12px;
+	min-width:50px;
+	max-width:130px;
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration: none;
+	background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#212121));
 }

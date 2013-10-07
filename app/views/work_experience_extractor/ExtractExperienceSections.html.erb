@@ -10,28 +10,34 @@
 	<%= stylesheet_link_tag    "middle_section_page", "extract_experience_sections" %>
 </head>
 <body>
-	<h1>Update Work Experience Records</h1>
+	<div class='TextInBarRoundedBorder YellowBar'>Update Work Experience Records</div>
 	<br>
 	<br>
-	<h3>Update work experience records</h3>
+	<br>
+	<br>
+	<div class='TextInBarRoundedBorder SubHeaderTextInBar GreenBar'>Update work experience records</div>
+	<br>
+	<br>
 	<br>
 	<form action="/work_experience_extractor/process_work_experience_document" method="post" id='workExperienceSubmission'>
 		<input type="text" size=50 value="public/NateSuttonResume.xml" id="workExperienceRecords" name="workExperienceRecords" readonly/>
 		<br>
 		<br>
-		<a href="javascript:document.forms['workExperienceSubmission'].submit()">Submit</a>
+		<div class="RectangleButton"><a href="javascript:document.forms['workExperienceSubmission'].submit()">Submit</a></div>
 	</form>
 	<br>
     <br>
 	<br>
-	<h3>Update work tags and tag categories</h3>
+	<div class='TextInBarRoundedBorder SubHeaderTextInBar'>Update work tags and tag categories</div>
+	<br>
+	<br>
 	<br>
 	<form action="/work_experience_extractor/process_tag_categories_document" method="post" id='tagCategoriesSubmission'>
 		<input type="text" size=50 value="public/TagCategories.xml" id="tagCategoryRecords" name="tagCategoryRecords" readonly/>
 		<br>
 		<br>
-		<a href="javascript:document.forms['tagCategoriesSubmission'].submit()">Submit</a>
+		<div class="RectangleButton"><a href="javascript:document.forms['tagCategoriesSubmission'].submit()">Submit</a></div>
 	</form>
 	<br>
-<h5><a href="javascript:history.back()">Previous page</a></h5>	
+<div class="RectangleButton"><h5><a href="javascript:history.back()">Previous page</a></h5></div>
 </body>
