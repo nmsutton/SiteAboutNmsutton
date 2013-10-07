@@ -14,10 +14,6 @@
 	</TagWithCategory>
 	<TagWithCategory>
 		<Category>Web Development</Category>
-		<Tag>Web Services</Tag>
-	</TagWithCategory>
-	<TagWithCategory>
-		<Category>Web Development</Category>
 		<Tag>Apache</Tag>
 	</TagWithCategory>
 	<TagWithCategory>
@@ -31,6 +27,10 @@
 	<TagWithCategory>
 		<Category>Web Development</Category>
 		<Tag>CSS</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development</Category>
+		<Tag>CGI</Tag>
 	</TagWithCategory>
 	<TagWithCategory>
 		<Category>Programming Languages</Category>
@@ -112,11 +112,20 @@
 		<Category>Integrated Development Environments</Category>
 		<Tag>Visual Studio Express</Tag>
 	</TagWithCategory>
-	<Category>Productivity Tools</Category>
-	<Tag>MS Office</Tag>
-</TagWithCategory>
-<TagWithCategory>
-	<Category>Programming Languages</Category>
-	<Tag>VBA</Tag>
-</TagWithCategory>
+	<TagWithCategory>
+		<Category>Productivity Tools</Category>
+		<Tag>MS Office</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Programming Languages</Category>
+		<Tag>VBA</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development Frameworks</Category>
+		<Tag>Ruby on Rails</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Web Development Frameworks</Category>
+		<Tag>Django</Tag>
+	</TagWithCategory>
 </root>

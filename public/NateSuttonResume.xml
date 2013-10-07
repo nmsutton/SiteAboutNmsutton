@@ -22,7 +22,7 @@
 		</WorkEntry>
 		<WorkEntry>
 			<TimeRange>April 2010 - May 2010</TimeRange>
-			<Description>Java Software Developer at Arizona State University, Phoenix, Az, Contributed to a genetic microarray image analysis program using Java and Support Vector Graphics. Optimizations were found for efficiently batch processing the datasets that were used. Image data matrices were processed for pattern recognition and the results included image output.</Description>
+			<Description>Java Software Developer at Arizona State University, Phoenix, Az, Contributed to a genetic microarray image analysis program using Java and Support Vector Graphics. Optimizations were found for efficiently batch processing the datasets that were used. Image data matrices were processed for pattern recognition and the results included image output.  Linux and Windows were used.</Description>
 		</WorkEntry>
 		<WorkEntry>
 			<TimeRange>August 2006 - June 2009</TimeRange>
@@ -36,19 +36,19 @@
 	<Projects>
 		<Project>
 			<TimeRange>10/09 - 11/09, 01/10 - 04/10</TimeRange>
-			<Description>Worked on a tool for automating science experiments using Apache Tomcat, Html, the Liferay web portal, CSS, and briefly Java including servlets with MySql and PostgreSQL.</Description>
+			<Description>Worked on a tool for automating science experiments using Apache Tomcat, Html, the Liferay web portal, CSS, and briefly Java including servelets with JDBC, MySql, and PostgreSQL.</Description>
 		</Project>
 		<Project>
 			<TimeRange>02/10 - 03/10</TimeRange>
-			<Description>Compiled a genetic pattern recognition program from source code in Linux and worked with that to perform population genetics research.  Advanced statistics were learned for the work.</Description>
+			<Description>Compiled a genetic pattern recognition program from source code in Linux and worked with that to perform population genetics research.  Advanced statistics such as some information on principle components analysis were learned for the work.  A tool used was Eigenstrat.</Description>
 		</Project>
 		<Project>
 			<TimeRange>03/10 - 06/10</TimeRange>
-			<Description>Worked on a project using Javascript, Java, and html to graphically show population genetics statistics.  Graphical presentations of underlying statistics were dynamically generated in web pages.</Description>
+			<Description>Worked on a project using Java Script, Java, and html to graphically show population genetics statistics.  Graphical presentations of underlying statistics were dynamically generated in web pages.</Description>
 		</Project>
 		<Project>
 			<TimeRange>03/10 - 05/10</TimeRange>
-			<Description>Used MySQL and Visual Basic for Applications on Excel to create an interactive report of genomic disease association analyses.</Description>
+			<Description>Used MySQL and Visual Basic for Applications (VBA) on Excel to create an interactive report of genomic disease association analyses.  The OS used was windows.</Description>
 		</Project>
 		<Project>
 			<TimeRange>07/10, 10/10 - 12/10</TimeRange>
@@ -56,36 +56,49 @@
 		</Project>
 		<Project>
 			<TimeRange>08/10 - 09/10</TimeRange>
-			<Description>Performed database management of genome sequences using MySQL.  Created sequence alignment analyses using private and public databases.</Description>
+			<Description>Performed database management of genome sequences using MySQL including integration with Perl scripting.  Created sequence alignment analyses using private and public databases.</Description>
 		</Project>
 		<Project>
 			<TimeRange>08/10 - 12/10</TimeRange>
-			<Description>Created a plug-in in Java for a genetic analysis workbench program.  A Java GUI was created to allow user interaction with the program.  The program interfaced with a web utility API for collection of scientific literature data.</Description>
+			<Description>Created a plug-in in Java for a genetic analysis workbench program.  A Java GUI was created to allow user interaction with the program.  The program interfaced with a web utility API for collection of scientific literature data.  The project involved a simulated full software development lifecycle, along with documentation including modeling, presentations, team collaboration, and more attributes.</Description>
 		</Project>
 		<Project>
 			<TimeRange>12/10 - 04/11</TimeRange>
-			<Description>Used Java and Perl to manipulate portions of genetic sequences for genetic transcription factor research.  XML was processed in Java using JDom for drug reaction research.  Data from multiple public databases were utilized and a variety of open source programs were integrated into the research.</Description>
+			<Description>Used Java and Perl to manipulate portions of genetic sequences for genetic transcription factor research.  XML was processed in Java using JDom for drug reaction research.  Data from multiple public databases were utilized and a variety of open source programs were integrated into the research.  Eclipse and a limited degree of Matlab were utilized.</Description>
 		</Project>
 		<Project>
 			<TimeRange>04/11 - 06/11</TimeRange>
-			<Description>Public databases were analyzed using Java to create comparisons of disease studies' results.  MySQL queries were used to map genetic regions to each other.  Advanced queries were performed using SQL.  Processing was done to compare data from multiple databases together.</Description>
+			<Description>Public databases were analyzed using Java in Eclipse to create comparisons of disease studies' results.  MySQL queries were used to map genetic regions to each other.  Advanced queries were performed using SQL.  Processing was done to compare data from multiple databases together.</Description>
 		</Project>
 		<Project>
 			<TimeRange>08/12</TimeRange>
-			<Description>Java was used to contribute to a project on extracting relationships between entities in medical records.  A combination of open source Java code and original programming was used.</Description>
+			<Description>Java in Eclipse was used to contribute to a project on extracting relationships between entities in medical records.  A combination of open source Java code and original programming was used.</Description>
 		</Project>
 		<Project>
 			<TimeRange>06/11 - 08/12</TimeRange>
 			<Description>Worked in text mining where programs were created or reimplemented in Java for the identification of text in scientific articles describing genes and drugs interacting together.</Description>
 		</Project>
+		<Project>
+			<TimeRange>02/13 - 03/13, 06/13, 08/13</TimeRange>
+			<Description>Programming contributions have been made to the Biopython project. My previous and ongoing work can be found at and biopython.org .  Some technologies worked with are Python, Matplotlib, Eclipse with Pydev, Fasttree, and others.</Description>
+		</Project>
+		<Project>
+			<TimeRange>06/13 - 07/13</TimeRange>
+			<Description>Built a web application at http://geneticanalyzer-bioinform.rhcloud.com/ , more details can be found on the site.  Some technologies worked with are Python, Matplotlib, Django, Eclipse with Pydev, MySQL, Openshift, Html, Css, Java Script, Plink, and others.</Description>
+		</Project>
+		<Project>
+			<TimeRange>04/07 - 07/07</TimeRange>
+			<Description>Developed a web site for music and movies with DHtml, Perl, CGI, and custom graphic design.  The site used original Perl code for forums, personal profiles, and user activity record keeping.  The site is offline now but I have a copy of it.</Description>
+		</Project>
+		<Project>
+			<TimeRange>09/13 - 10/13</TimeRange>
+			<Description>Developed a web site for sharing professional and personal details of myself.  Technologies used include Ruby, Ruby on Rails, XML, MySQL, Html5, Github, JQuery, Html, Css, Java Script, and others.</Description>
+		</Project>
 	</Projects>
-	<PersonalProjects>Programming contributions have been made to the Biopython project. My previous and ongoing work can be found at https://github.com/nmsutton and biopython.org.
-		Built a web application at http://geneticanalyzer-bioinform.rhcloud.com/
-		Developed a web site with DHtml, Perl, CGI, and custom graphic design. The site used original Perl code for forums, personal profiles, and user activity record keeping. The site is offline now but I have a copy of it.</PersonalProjects>
 	<Classes>
 		<Class>
 			<TimeRange>2009</TimeRange>
-			<Description>C++ and Object Oriented Programming: Programming skills learned included classes, modular programming, exception handling, overloaded functions, and templates.</Description>
+			<Description>C++ (CPlusPlus) and Object Oriented Programming: Programming skills learned included classes, modular programming, exception handling, overloaded functions, and templates.  Visual Studio Express was used.</Description>
 		</Class>
 		<Class>
 			<TimeRange>2009</TimeRange>
@@ -98,6 +111,10 @@
 		<Class>
 			<TimeRange>2010</TimeRange>
 			<Description>Problem Solving in Biomedical Informatics: Concepts, methods, and techniques of software engineering were taught. A class project was done in Java on a plug-in for a microarray analysis tool.</Description>
+		</Class>
+		<Class>
+			<TimeRange>2005</TimeRange>
+			<Description>Independent Study in Bioinformatics: A variety of bioinformatics programs were taught and created in Ruby including sequence alignment, sequence processing, mutation simulation, and others.</Description>
 		</Class>
 	</Classes>
 	<ComputerSkills>Languages:	Java, Python, Perl, C++, C, Ruby, Html, Java Script, XML, R, Briefly MatLab.
