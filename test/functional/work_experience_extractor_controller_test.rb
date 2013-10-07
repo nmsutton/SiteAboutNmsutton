@@ -5,5 +5,4 @@ class WorkExperienceExtractorControllerTest < ActionController::TestCase
     get :ExtractExperienceSections
     assert_response :success
   end
-
 end

@@ -6,17 +6,15 @@ class TagNavigatorControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "tag categories are availible" do
+  test "Unique tag categories are availible" do
     get :tag_navigator
     
-    assert_not_nil assigns(:UniqueTagCategories)
-    #refute_nil(@UniqueTagCategories, "tag categories are availible")
+    assert_not_nil(assigns(:UniqueTagCategories), "Unique tag categories were found to be nil when a group of them was expected")
   end
   
-  test "tags with categories were found" do
+  test "Group of tags with categories was found to not be nil" do
     get :tag_navigator
     
-    assert_not_nil assigns(:TagCategoryList)
-    #refute_nil(@TagCategoryList, "tags in categories are found")
+    assert_not_nil(assigns(:TagCategoryList), "Group of tags with categories was found to be nil when content was expected in the group")
   end
 end

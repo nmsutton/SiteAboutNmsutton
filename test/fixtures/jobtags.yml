@@ -7,3 +7,15 @@
 sample_1:
   workSectionID : 4
   tagName : "Linux"
+
+sample_2:
+  workSectionID : 2
+  tagName : "Linux"
+  
+sample_3:
+  workSectionID : 1
+  tagName : "Ruby"
+  
+sample_4:
+  workSectionID : 4
+  tagName : "MySQL"

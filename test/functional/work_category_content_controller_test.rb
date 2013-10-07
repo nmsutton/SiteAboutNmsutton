@@ -5,10 +5,9 @@ class WorkCategoryContentControllerTest < ActionController::TestCase
     get :choose_work_category
     assert_response :success
   end
-
-  test "should get display_work_category" do
-    get :display_work_category
-    assert_response :success
+  
+  test "Confirm unique tags group contains retreived content " do
+    get :projects
+    assert_not_nil(:UniqueTags)
   end
-
 end
