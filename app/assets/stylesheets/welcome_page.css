@@ -1,3 +1,34 @@
 #TextBox {
 	max-width:80%;
 }
+#welcome_page_contact {
+	display:inline-block;
+	text-align:left;
+	width=15%;
+	background-color: rgba(68,68,68,.5);
+	/*background-color:#454545;*/
+	font-size:12px;
+	padding:5px;
+	margin:5px;
+	vertical-align:top;
+		 /*-khtml-opacity:.70; 
+ -moz-opacity:.70; 
+ -ms-filter:"alpha(opacity=70)";
+  filter:alpha(opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.7);
+  opacity:.30; 
+  overflow:hidden;*/
+}
+#AlignTextToLeft {
+	display:inline-block;
+	width:75%;
+}
+#AlignTextToRight {
+	position:relative;
+	top:-25px;
+	left:40%;
+}
+#MoveContactLinksUp {
+	position:relative;
+	top:-25px;
+}

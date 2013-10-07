@@ -9,6 +9,7 @@ body {
 	background-color: #1a1d25;
 	background-image: url(templatemo_body.png);
 	background-repeat: repeat
+	overflow:auto;
 }
 
 #middle_page_region {
