@@ -24,15 +24,9 @@ class WorkExperienceExtractorController < ApplicationController
 
     f = File.open(@filePath)
     @doc = Nokogiri::XML(f)
-    @projectDescriptions = @doc.xpath('//Project').map do |i|
-      {:time_range => i.xpath('TimeRange/text()').text, :description => i.xpath('Description/text()').text}
-    end
-    @jobDescriptions = @doc.xpath('//WorkEntry').map do |i|
-      {:time_range => i.xpath('TimeRange/text()').text, :description => i.xpath('Description/text()').text}
-    end
-    @classDescriptions = @doc.xpath('//Class').map do |i|
-      {:time_range => i.xpath('TimeRange/text()').text, :description => i.xpath('Description/text()').text}
-    end
+    @projectDescriptions = loadDataFromDocument(@doc, '//Project', :time_range, 'TimeRange/text()', :description, 'Description/text()')
+    @jobDescriptions = loadDataFromDocument(@doc, '//WorkEntry', :time_range, 'TimeRange/text()', :description, 'Description/text()')
+    @classDescriptions = loadDataFromDocument(@doc, '//Class', :time_range, 'TimeRange/text()', :description, 'Description/text()')
     f.close
 
     storeDataInDatabase(@projectDescriptions, Project, :time_range, :description)
@@ -49,9 +43,7 @@ class WorkExperienceExtractorController < ApplicationController
 
     f = File.open(@filePath)
     @doc = Nokogiri::XML(f)
-    @tagCategoriesDescriptions = @doc.xpath('//TagWithCategory').map do |i|
-      {:tag_category => i.xpath('Category/text()').text, :tag_name => i.xpath('Tag/text()').text}
-    end
+    @tagCategoriesDescriptions = loadDataFromDocument(@doc, '//TagWithCategory', :tag_category, 'Category/text()', :tag_name, 'Tag/text()')
     f.close
 
     storeDataInDatabase(@tagCategoriesDescriptions, Categorytag, :tag_category, :tag_name)
@@ -73,6 +65,14 @@ class WorkExperienceExtractorController < ApplicationController
     if (@rowGroup != nil)
     table.import @rowGroup
     end
+  end
+  
+  def loadDataFromDocument(doc, tableName, dbColumnA, sourceDocColumnA, dbColumnB, sourceDocColumnB)
+    @parsedDocumentData = doc.xpath(tableName).map do |i|
+      {dbColumnA => i.xpath(sourceDocColumnA).text, dbColumnB => i.xpath(sourceDocColumnB).text}
+    end
+    
+    return @parsedDocumentData
   end
 
   #
