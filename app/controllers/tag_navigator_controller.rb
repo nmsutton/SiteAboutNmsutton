@@ -7,15 +7,15 @@
 #
 class TagNavigatorController < ApplicationController
   def tag_navigator
-    @UniqueTagCategories = TagCategorie.find_by_sql([ 'select distinct(tagCategory) from tag_categories' ]);
+    @UniqueTagCategories = Categorytag.find_by_sql([ 'select distinct(tag_category) from categorytags' ]);
     @GroupWithTagsAndTagCategory = []
     @TagCategoryList = []
     @UniqueTagCategories.each do |uniqueTagCategory|
       @GroupWithTagsAndTagCategory = []
-      @GroupWithTagsAndTagCategory << uniqueTagCategory.tagCategory
-      @TagList = TagCategorie.find_by_sql(['select tagName from tag_categories where tagCategory = ?', uniqueTagCategory.tagCategory ]);
+      @GroupWithTagsAndTagCategory << uniqueTagCategory.tag_category
+      @TagList = Categorytag.find_by_sql(['select tag_name from categorytags where tag_category = ?', uniqueTagCategory.tag_category ]);
       @TagList.each do |tagListEntry|
-        @GroupWithTagsAndTagCategory << tagListEntry.tagName
+        @GroupWithTagsAndTagCategory << tagListEntry.tag_name
       end
       @TagCategoryList << @GroupWithTagsAndTagCategory
     end

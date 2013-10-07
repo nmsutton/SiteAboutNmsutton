@@ -11,13 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006092937) do
+ActiveRecord::Schema.define(:version => 20131007014239) do
+
+  create_table "categorytags", :force => true do |t|
+    t.string   "tag_category"
+    t.text     "tag_name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "classes", :force => true do |t|
     t.string   "time_range"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "classtags", :force => true do |t|
+    t.integer  "workSectionID"
+    t.string   "tagName"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "jobs", :force => true do |t|
@@ -27,6 +41,13 @@ ActiveRecord::Schema.define(:version => 20131006092937) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "jobtags", :force => true do |t|
+    t.integer  "workSectionID"
+    t.string   "tagName"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "time_range"
     t.text     "description"
@@ -34,28 +55,7 @@ ActiveRecord::Schema.define(:version => 20131006092937) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "tag_categories", :force => true do |t|
-    t.string   "tagCategory"
-    t.string   "tagName"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "tags_in_classes", :force => true do |t|
-    t.integer  "workSectionID"
-    t.string   "tagName"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "tags_in_jobs", :force => true do |t|
-    t.integer  "workSectionID"
-    t.string   "tagName"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "tags_in_projects", :force => true do |t|
+  create_table "projecttags", :force => true do |t|
     t.integer  "workSectionID"
     t.string   "tagName"
     t.datetime "created_at",    :null => false

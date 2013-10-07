@@ -4,6 +4,6 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one:
-    time_range  : 10
-    description : Test test
+sample_1:
+  workSectionID : 4
+  tagName : "Linux"

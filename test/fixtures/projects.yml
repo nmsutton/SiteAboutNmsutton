@@ -4,6 +4,6 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-sample_project:
-    time_range  : "01/13 - 03/13"
-    description : "Sample project description"
+sample_1:
+    time_range  : "12/10 - 04/11"
+    description : "Used Java and Perl to manipulate portions of genetic sequences for genetic transcription factor research.  XML was processed in Java using JDom for drug reaction research.  Data from multiple public databases were utilized and a variety of open source programs were integrated into the research."

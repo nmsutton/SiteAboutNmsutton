@@ -50,15 +50,15 @@ class WorkExperienceExtractorController < ApplicationController
     f = File.open(filePath)
     @doc = Nokogiri::XML(f)
     @tagCategoriesDescriptions = @doc.xpath('//TagWithCategory').map do |i|
-      {:tagCategory => i.xpath('Category/text()').text, :tagName => i.xpath('Tag/text()').text}
+      {:tag_category => i.xpath('Category/text()').text, :tag_name => i.xpath('Tag/text()').text}
     end
     f.close
 
-    storeDataInDatabase(@tagCategoriesDescriptions, TagCategorie, :tagCategory, :tagName)
+    storeDataInDatabase(@tagCategoriesDescriptions, Categorytag, :tag_category, :tag_name)
 
-    extractTags(Project, "projects", TagsInProject)
-    extractTags(Job, "jobs", TagsInJob)
-    extractTags(Classe, "classes", TagsInClasse)
+    extractTags(Project, "projects", Projecttag)
+    extractTags(Job, "jobs", Jobtag)
+    extractTags(Classe, "classes", Classtag)
 
     render '/work_experience_extractor/ExtractExperienceSections.html'
   end
@@ -82,14 +82,14 @@ class WorkExperienceExtractorController < ApplicationController
   #
   def extractTags(rubyWorkCategoryTable, dbWorkCategoryTable, workCategoryWithTagsTable)
     @tags= []
-    @tags = TagCategorie.find_by_sql(['select distinct(tagName) from tag_categories']);
+    @tags = Categorytag.find_by_sql(['select distinct(tag_name) from categorytags']);
     @tagsInWorkCategory = []
 
     @tags.each do |tag|
       @workCategoryIDsWithTag = []
-      @workCategoryIDsWithTag = rubyWorkCategoryTable.find_by_sql(['select id from '+dbWorkCategoryTable+' where description regexp \'.*'+tag.tagName+'.*\'']);
+      @workCategoryIDsWithTag = rubyWorkCategoryTable.find_by_sql(['select id from '+dbWorkCategoryTable+' where description regexp \'.*'+tag.tag_name+'.*\'']);
       @workCategoryIDsWithTag.each do |workCategoryID|
-        @tagsInWorkCategory << {:workSectionID => workCategoryID.id, :tagName => tag.tagName}
+        @tagsInWorkCategory << {:workSectionID => workCategoryID.id, :tagName => tag.tag_name}
       end
     end
 

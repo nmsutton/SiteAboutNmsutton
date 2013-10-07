@@ -9,9 +9,9 @@ class TagDetailsController < ApplicationController
   def tag_details
     $tagName = params[:parameterName]
 
-    @ProjectsWithTag = getWorkDetails(Project, 'projects', TagsInProject, 'tags_in_projects', $tagName)
-    @JobsWithTag = getWorkDetails(Job, 'jobs', TagsInJob, 'tags_in_jobs', $tagName)
-    @ClassesWithTag = getWorkDetails(Classe, 'classes', TagsInClasse, 'tags_in_classes', $tagName)
+    @ProjectsWithTag = getWorkDetails(Project, 'projects', Projecttag, 'projecttags', $tagName)
+    @JobsWithTag = getWorkDetails(Job, 'jobs', Jobtag, 'jobtags', $tagName)
+    @ClassesWithTag = getWorkDetails(Classe, 'classes', Classtag, 'classtags', $tagName)
 
     $RelevantProjectDescriptions = createTextBoxFormatting(@ProjectsWithTag)
     $RelevantJobDescriptions = createTextBoxFormatting(@JobsWithTag)

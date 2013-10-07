@@ -24,9 +24,9 @@ All descriptions for a given work category are retreived.
 				<% processedDescription.sub!(Regexp.new('java', Regexp::IGNORECASE),
                   "<a href=\"javascript:processTagLink('Java')\">Java</a>") %>
 				<% @UniqueTags.each do |tagListEntry| %>
-				<% if (!(tagListEntry.tagName =~ /[jJ][aA][vV][aA]/))%>
-				<% processedDescription.sub!(Regexp.new(tagListEntry.tagName, Regexp::IGNORECASE),
-                  "<a href=\"javascript:processTagLink('"+tagListEntry.tagName+"')\">"+tagListEntry.tagName+"</a>") %> <% end %>
+				<% if (!(tagListEntry.tag_name =~ /[jJ][aA][vV][aA]/))%>
+				<% processedDescription.sub!(Regexp.new(tagListEntry.tag_name, Regexp::IGNORECASE),
+                  "<a href=\"javascript:processTagLink('"+tagListEntry.tag_name+"')\">"+tagListEntry.tag_name+"</a>") %> <% end %>
 				<% end %>
 				<%= processedDescription.html_safe %>
 			</div>

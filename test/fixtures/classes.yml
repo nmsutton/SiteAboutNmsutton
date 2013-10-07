@@ -4,8 +4,10 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+sample_1:
+    time_range  : "2009"
+    description : "C++ and Object Oriented Programming: Programming skills learned included classes, modular programming, exception handling, overloaded functions, and templates."
+
+sample_2:
+    time_range  : "2010"
+    description : "Problem Solving in Biomedical Informatics: Concepts, methods, and techniques of software engineering were taught. A class project was done in Java on a plug-in for a microarray analysis tool."
