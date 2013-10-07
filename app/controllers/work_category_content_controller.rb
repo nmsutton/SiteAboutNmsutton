@@ -13,31 +13,23 @@ class WorkCategoryContentController < ApplicationController
   end
   
   def projects
-    @workCategoryKeyword = 'Projects'
-    
-    @UniqueTags = Categorytag.find_by_sql([ 'select distinct(tag_name) from categorytags' ]);
-    
-    @WorkCategory = Project
-    
-    render "/work_category_content/display_work_category.html"
+    prepareWorkCategoryDisplay('Projects', Project)
   end
   
   def jobs
-    @workCategoryKeyword = 'Jobs'
-    
-    @UniqueTags = Categorytag.find_by_sql([ 'select distinct(tag_name) from categorytags' ]);
-    
-    @WorkCategory = Job
-    
-    render "/work_category_content/display_work_category.html"
+    prepareWorkCategoryDisplay('Jobs', Job)
   end
   
   def classes
-    @workCategoryKeyword = 'Classes'
+    prepareWorkCategoryDisplay('Classes', Classe)
+  end
+  
+  def prepareWorkCategoryDisplay(keyword, category)
+    @workCategoryKeyword = keyword
     
     @UniqueTags = Categorytag.find_by_sql([ 'select distinct(tag_name) from categorytags' ]);
     
-    @WorkCategory = Classe
+    @WorkCategory = category
     
     render "/work_category_content/display_work_category.html"
   end
