@@ -7,15 +7,15 @@
 #
 class TagDetailsController < ApplicationController
   def tag_details
-    $tagName = params[:parameterName]
+    @tagName = params[:parameterName]
 
-    @ProjectsWithTag = getWorkDetails(Project, 'projects', Projecttag, 'projecttags', $tagName)
-    @JobsWithTag = getWorkDetails(Job, 'jobs', Jobtag, 'jobtags', $tagName)
-    @ClassesWithTag = getWorkDetails(Classe, 'classes', Classtag, 'classtags', $tagName)
+    @ProjectsWithTag = getWorkDetails(Project, 'projects', Projecttag, 'projecttags', @tagName)
+    @JobsWithTag = getWorkDetails(Job, 'jobs', Jobtag, 'jobtags', @tagName)
+    @ClassesWithTag = getWorkDetails(Classe, 'classes', Classtag, 'classtags', @tagName)
 
-    $RelevantProjectDescriptions = createTextBoxFormatting(@ProjectsWithTag)
-    $RelevantJobDescriptions = createTextBoxFormatting(@JobsWithTag)
-    $RelevantClassDescriptions = createTextBoxFormatting(@ClassesWithTag)
+    @RelevantProjectDescriptions = createTextBoxFormatting(@ProjectsWithTag)
+    @RelevantJobDescriptions = createTextBoxFormatting(@JobsWithTag)
+    @RelevantClassDescriptions = createTextBoxFormatting(@ClassesWithTag)
   end
 
   def getWorkDetails(rubyGroupTable, dbGroupTable, rubyTagAndGroupTable, dbTagAndGroupTable, tag)
@@ -37,21 +37,21 @@ class TagDetailsController < ApplicationController
   # css styling is handled externally but formatting to prepare for it is done here.
   #
   def createTextBoxFormatting(workCategoryDetails)
-    $textBoxFormatting = ""
+    @textBoxFormatting = ""
     titleIndex = 0
     queryResultIndex = 0;
     for tagCategoryEntryIndex in (0..workCategoryDetails.length - 1)
-      $textBoxFormatting << "<div class='rounded-corners outer-shadows TagRelevantWorkDescription'>
+      @textBoxFormatting << "<div class='rounded-corners outer-shadows TagRelevantWorkDescription'>
       <div id='TextBoxHeader'>"
-      $textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][titleIndex][queryResultIndex].time_range
-      $textBoxFormatting << "</div>"
+      @textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][titleIndex][queryResultIndex].time_range
+      @textBoxFormatting << "</div>"
       for tagEntryIndex in (1..workCategoryDetails[tagCategoryEntryIndex].length - 1)
-        $textBoxFormatting << "<div id='TextBoxBody'>"
-        $textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][tagEntryIndex][queryResultIndex].description
-        $textBoxFormatting << "</div>"
+        @textBoxFormatting << "<div id='TextBoxBody'>"
+        @textBoxFormatting << workCategoryDetails[tagCategoryEntryIndex][tagEntryIndex][queryResultIndex].description
+        @textBoxFormatting << "</div>"
       end
-      $textBoxFormatting << "</div>"
+      @textBoxFormatting << "</div>"
     end
-    return $textBoxFormatting.html_safe
+    return @textBoxFormatting.html_safe
   end
 end

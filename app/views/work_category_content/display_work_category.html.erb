@@ -1,7 +1,9 @@
 <!--Nate Sutton
 Copyright 2013
 
-All descriptions for a given work category are retreived.
+All descriptions for a given work category are retreived.  Apart of the regular expressions used is logic to avoid an issue
+with javascript html tags being unwantedly detected as work tags.  The term java is searched for first before additional 
+javascript html tags are added to the document to help assist the issue.  
 -->
 <head>
 	<%= stylesheet_link_tag    "middle_section_page", :media => "all" %>
@@ -20,15 +22,15 @@ All descriptions for a given work category are retreived.
 				<%= c.time_range %>
 			</div>
 			<div id="TextBoxBody">
-				<% processedDescription = c.description %>
-				<% processedDescription.sub!(Regexp.new('java', Regexp::IGNORECASE),
+				<% @processedDescription = c.description %>
+				<% @processedDescription.sub!(Regexp.new('java', Regexp::IGNORECASE),
                   "<a href=\"javascript:processTagLink('Java')\">Java</a>") %>
 				<% @UniqueTags.each do |tagListEntry| %>
 				<% if (!(tagListEntry.tag_name =~ /[jJ][aA][vV][aA]/))%>
-				<% processedDescription.sub!(Regexp.new(tagListEntry.tag_name, Regexp::IGNORECASE),
+				<% @processedDescription.sub!(Regexp.new(tagListEntry.tag_name, Regexp::IGNORECASE),
                   "<a href=\"javascript:processTagLink('"+tagListEntry.tag_name+"')\">"+tagListEntry.tag_name+"</a>") %> <% end %>
 				<% end %>
-				<%= processedDescription.html_safe %>
+				<%= @processedDescription.html_safe %>
 			</div>
 			<br>
 		</div>

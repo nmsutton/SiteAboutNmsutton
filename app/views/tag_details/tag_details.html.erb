@@ -11,25 +11,25 @@
 	<%= stylesheet_link_tag    "middle_section_page" %>
 </head>
 <body>
-<div class='TextInBarRoundedBorder'>Selected Experience With <%= $tagName %></div>
+<div class='TextInBarRoundedBorder'>Selected Experience With <%= @tagName %></div>
 <br>
 <br>
 <p>
 	<% if @ProjectsWithTag.length > 0 then %>
 		<div class='TextInBarRoundedBorder SubHeaderTextInBar GreenBar'>Projects</div>
-	<%= $RelevantProjectDescriptions %>
+	<%= @RelevantProjectDescriptions %>
 	<% end %>
 </p>
 <p>
 	<% if @JobsWithTag.length > 0 then %>
 		<div class='TextInBarRoundedBorder SubHeaderTextInBar YellowBar'>Jobs</div>
-	<%= $RelevantJobDescriptions %>
+	<%= @RelevantJobDescriptions %>
 	<% end %>
 </p>
 <p>
 	<% if @ClassesWithTag.length > 0 then %>
 		<div class='TextInBarRoundedBorder SubHeaderTextInBar'>Classes</div>
-	<%= $RelevantClassDescriptions %>
+	<%= @RelevantClassDescriptions %>
 	<% end %>
 </p>
 <div class="RectangleButton"><h5><a href="javascript:history.back()">Previous page</a></h5></div>

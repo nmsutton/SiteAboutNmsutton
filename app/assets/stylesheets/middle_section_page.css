@@ -104,10 +104,8 @@ h6 {
 	font-weight: 500;
 	padding: 15px 0px 0px 0px;
 	width: 70%;
-	height: 45px;
+	min-height: 45px;
 	background-image: url(BlueBar.jpg);
-	overflow: hidden;
-	clear: both;
 	display: inline-block;
 	behavior: url(border-radius.htc);
 	margin-left: auto;
@@ -131,7 +129,7 @@ h6 {
 	font-size: 27px;
 	width: 40%;
 	padding: 5px 0px 7px 0px;
-	height: 25px;
+	min-height: 20px;
 }
 .GreenBar {
 	background-image: url(GreenBar.jpg);

@@ -16,13 +16,13 @@ class WorkExperienceExtractorController < ApplicationController
   # more details.
   #
   def processWorkExperienceDocument
-    filePath = params[:workExperienceRecords]
+    @filePath = params[:workExperienceRecords]
 
     @projectDescriptions = []
     @jobDescriptions = []
     @classDescriptions = []
 
-    f = File.open(filePath)
+    f = File.open(@filePath)
     @doc = Nokogiri::XML(f)
     @projectDescriptions = @doc.xpath('//Project').map do |i|
       {:time_range => i.xpath('TimeRange/text()').text, :description => i.xpath('Description/text()').text}
@@ -43,11 +43,11 @@ class WorkExperienceExtractorController < ApplicationController
   end
 
   def processTagCategoriesDocument
-    filePath = params[:tagCategoryRecords]
+    @filePath = params[:tagCategoryRecords]
 
     @tagCategoriesDescriptions = []
 
-    f = File.open(filePath)
+    f = File.open(@filePath)
     @doc = Nokogiri::XML(f)
     @tagCategoriesDescriptions = @doc.xpath('//TagWithCategory').map do |i|
       {:tag_category => i.xpath('Category/text()').text, :tag_name => i.xpath('Tag/text()').text}
@@ -64,14 +64,14 @@ class WorkExperienceExtractorController < ApplicationController
   end
 
   def storeDataInDatabase(sectionDescriptions, table, columnA, columnB)
-    rowGroup = []
+    @rowGroup = []
     sectionDescriptions.each do |row|
       unless table.exists?(columnA => row[columnA], columnB => row[columnB])
-      rowGroup << table.new(columnA => row[columnA], columnB => row[columnB])
+      @rowGroup << table.new(columnA => row[columnA], columnB => row[columnB])
       end
     end
-    if (rowGroup != nil)
-    table.import rowGroup
+    if (@rowGroup != nil)
+    table.import @rowGroup
     end
   end
 
