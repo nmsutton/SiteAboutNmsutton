@@ -1,5 +1,5 @@
 SiteAboutNMSutton
-Version 1.0
+Version 1.01
 Author NMSutton
 Copyright 2013
 
@@ -7,6 +7,8 @@ Thanks for checking this web site out.  Some further details about this site are
 
 One feature of this site is automatic generation of links between related concepts in the content.  Tagging with specific keywords was used to organize the concepts identified.  Initially a record of tags and tag categories is imported from a user defined xml file.  That content is stored in the database and Ruby scripting with SQL regular expressions are used to record what descriptions in the database contain the tags of interest.  When the description content of work experience is presented links are automatically integrated into it to allow finding more details about the subjects.  Ruby's regular expressions are used to detect and add page links to descriptions.  
 
-Some further things kept in mind when designing this site were good practices of efficient data access, flexable or responsive design to resolutions, avoiding redundancy in code, keeping the presentation, logic, and data storage layers of the application separate, and other things.  This site can be an extensible storage place for work related experiences and can potentially be acquired and customized for similar use by the public.
+Some further things kept in mind when designing this site were good practices of efficient data access, flexable or responsive design to resolutions, avoiding redundancy in code, keeping the presentation, logic, and data storage layers of the application separate, and other things.  This site can be an extensible storage place for work related experiences and can potentially be acquired and customized for similar use by the public.  
+
+Some unit, functional, and integration tests can be found in their respective folders under the /test/ directory.  All tests can be run from the command line from the base directory of this web application with the command 'rake test', individual tests can be run with 'rake test TEST=<relative path of test file>'.
 
 Regarding security, it is well understood that more security should be added for user access to updating records.  Since this is an example of programming site I included a way for users to see how work experience records can be added or updated but selecting new data to add has been intentionally deactivated.  Overall, this site shows examples of collecting structured input from users, managing it with a database, automating logic on the data to extract information from it in the form of tag connections,  and providing a few ways for users to receive and review the data stored in the records over the web which offers valuable accessibility and other advantages.  I hope you like taking a look at this web site!
