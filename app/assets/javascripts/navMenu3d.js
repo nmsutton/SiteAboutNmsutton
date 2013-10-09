@@ -9,10 +9,6 @@
  * Html5canvastutorials.com
  */
 
-function processNavBarLink(url) {
-	$("#iframe").attr('src', url);
-}
-
 // general 3d object parameters
 xRotation = 4.0;
 yRotation = 1.0;
@@ -48,7 +44,7 @@ var scene = new THREE.Scene();
 
 // cube
 var Cube1Texture = new THREE.MeshLambertMaterial({
-	map : THREE.ImageUtils.loadTexture("assets/Cube1Texture.jpg")
+	map : THREE.ImageUtils.loadTexture("/assets/Cube1Texture.jpg")
 });
 var cube1 = new THREE.Mesh(new THREE.CubeGeometry(cubesWidth, cubesHeight, cubesDepth), Cube1Texture);
 cube1.overdraw = true;
@@ -58,7 +54,7 @@ cube1AdjustedMouseY = 0;
 scene.add(cube1);
 
 var Cube2Texture = new THREE.MeshLambertMaterial({
-	map : THREE.ImageUtils.loadTexture("assets/Cube2Texture.jpg")
+	map : THREE.ImageUtils.loadTexture("/assets/Cube2Texture.jpg")
 });
 var cube2 = new THREE.Mesh(new THREE.CubeGeometry(cubesWidth, cubesHeight, cubesDepth), Cube2Texture);
 cube2.overdraw = true;
@@ -68,7 +64,7 @@ cube2AdjustedMouseY = (window.innerWidth * .25);
 scene.add(cube2);
 
 var Cube3Texture = new THREE.MeshLambertMaterial({
-	map : THREE.ImageUtils.loadTexture("assets/Cube3Texture.jpg")
+	map : THREE.ImageUtils.loadTexture("/assets/Cube3Texture.jpg")
 });
 var cube3 = new THREE.Mesh(new THREE.CubeGeometry(cubesWidth, cubesHeight, cubesDepth), Cube3Texture);
 cube3.overdraw = true;
@@ -78,7 +74,7 @@ cube3AdjustedMouseY = (window.innerWidth * .5);
 scene.add(cube3);
 
 var Cube4Texture = new THREE.MeshLambertMaterial({
-	map : THREE.ImageUtils.loadTexture("assets/Cube4Texture.jpg")
+	map : THREE.ImageUtils.loadTexture("/assets/Cube4Texture.jpg")
 });
 var cube4 = new THREE.Mesh(new THREE.CubeGeometry(cubesWidth, cubesHeight, cubesDepth), Cube4Texture);
 cube4.overdraw = true;
@@ -88,7 +84,7 @@ cube4AdjustedMouseY = (window.innerWidth * .75);
 scene.add(cube4);
 
 var Cube5Texture = new THREE.MeshLambertMaterial({
-	map : THREE.ImageUtils.loadTexture("assets/Cube5Texture.jpg")
+	map : THREE.ImageUtils.loadTexture("/assets/Cube5Texture.jpg")
 });
 var cube5 = new THREE.Mesh(new THREE.CubeGeometry(cubesWidth, cubesHeight, cubesDepth), Cube5Texture);
 cube5.overdraw = true;
@@ -123,23 +119,23 @@ $(document).ready(function() {
 		mouseX = event.pageX;
 		minY = 60, maxY = 120, minX = (window.innerWidth * .25), maxX = (window.innerWidth * .35);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-			processNavBarLink('/welcome_page/welcome_page.html');
+			window.location.href = '/welcome_page/welcome_page.html';
 
 		minX = (window.innerWidth * .355), maxX = (window.innerWidth * .45);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-			processNavBarLink('/work_category_content/choose_work_category.html');
+			window.location.href = '/work_category_content/choose_work_category.html';
 
 		minX = (window.innerWidth * .455), maxX = (window.innerWidth * .55);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-			processNavBarLink('/tag_navigator/tag_navigator.html');
+			window.location.href = '/tag_navigator/tag_navigator.html';
 
 		minX = (window.innerWidth * .555), maxX = (window.innerWidth * .65);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-			processNavBarLink('/work_experience_extractor/ExtractExperienceSections.html');
+			window.location.href = '/work_experience_extractor/ExtractExperienceSections.html';
 
 		minX = (window.innerWidth * .655), maxX = (window.innerWidth * .75);
 		if (mouseY >= minY & mouseY <= maxY & mouseX >= minX & mouseX <= maxX)
-			processNavBarLink('NateSuttonResume.html');
+			window.location.href = '/nmsuttondetails/NateSuttonResume';
 	});
 	
 	
