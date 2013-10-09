@@ -1,38 +1,42 @@
 <!--Nate Sutton
-	Copyright 2013
-	
-	Options are presented offering different work categories to explore.
-	-->	
-<head>
-	<%= stylesheet_link_tag    "middle_section_page", :media => "all" %>
-</head>
+Copyright 2013
+
+Options are presented offering different work categories to explore.
+-->
 <body>
-<br>
-<div class='TextInBarRoundedBorder SubHeaderTextInBar GreenBar'>Select From Amongst The Categories of Work</div>
-<br>
-<br>
-<br>
-<div class="rounded-corners outer-shadows" id="TextBox">
-	<div id="TextBoxBody">
-		<h1><a href="/work_category_content/projects">Projects</a></h1>
+	<%= render :partial => 'nmsuttondetails/generalBeginningSection' %>
+	<div id="mainContent">
+		<br>
+		<div class='TextInBarRoundedBorder SubHeaderTextInBar GreenBar'>
+			Select From Amongst The Categories of Work
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="rounded-corners outer-shadows" id="TextBox">
+			<div id="TextBoxBody">
+				<h1><a href="/work_category_content/projects">Projects</a></h1>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="rounded-corners outer-shadows" id="TextBox">
+			<div id="TextBoxBody">
+				<h1><a href="/work_category_content/jobs">Jobs</a></h1>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="rounded-corners outer-shadows" id="TextBox">
+			<div id="TextBoxBody">
+				<h1><a href="/work_category_content/classes">Classes</a></h1>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="RectangleButton">
+			<h5><a href="javascript:history.back()">Previous page</a></h5>
+		</div>
 	</div>
-</div>
-<br>
-<br>
-<div class="rounded-corners outer-shadows" id="TextBox">
-	<div id="TextBoxBody">
-		<h1><a href="/work_category_content/jobs">Jobs</a></h1>
-	</div>
-</div>
-<br>
-<br>
-<div class="rounded-corners outer-shadows" id="TextBox">
-	<div id="TextBoxBody">
-		<h1><a href="/work_category_content/classes">Classes</a></h1>
-	</div>
-</div>
-<br>
-<br>
-<br>
-<div class="RectangleButton"><h5><a href="javascript:history.back()">Previous page</a></h5></div>
 </body>

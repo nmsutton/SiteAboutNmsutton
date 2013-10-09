@@ -1,4 +1,6 @@
 SiteAboutNMSutton::Application.routes.draw do
+  get "nmsuttondetails/_generalBeginningSection"
+
   get "welcome_page/welcome_page"
 
   get "work_category_content/choose_work_category"
@@ -10,8 +12,6 @@ SiteAboutNMSutton::Application.routes.draw do
   get "work_experience_extractor/ExtractExperienceSections"
 
   get "tag_navigator/tag_navigator"
-
-  get "nmsuttondetails/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -62,7 +62,7 @@ SiteAboutNMSutton::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'nmsuttondetails#index'
+  root :to => 'welcome_page#welcome_page'
 
   # See how all your routes lay out with "rake routes"
 
@@ -81,4 +81,6 @@ SiteAboutNMSutton::Application.routes.draw do
   match '/work_category_content/jobs' => 'work_category_content#jobs'
   
   match '/work_category_content/classes' => 'work_category_content#classes'
+  
+  match '/nmsuttondetails/NateSuttonResume' => 'nmsuttondetails#NateSuttonResume'
 end

@@ -11,19 +11,6 @@ body {
 	background-repeat: repeat
 	overflow:auto;
 }
-
-#middle_page_region {
-	position:relative;
-	width: 85%;
-	margin: 0 auto;
-	padding: 0 10px;
-	top:-200px;
-}
-#spacer {
-	width: 100px;
-	height: 100px;
-	left: 400px;
-}
 .rounded-corners {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -68,13 +55,13 @@ body {
 	max-width:90%;
 }
 #nateSuttonImage {
-	position:relative;
-	top:-220px;
+	position:absolute;
+	top:-20px;
 	left:15%;
 }
 #githubLink {
-	position:relative;
-	top:-290px;
+	position:absolute;
+	top:30px;
 	left:79%;
 	z-index: 2;	
 }
@@ -86,6 +73,13 @@ body {
 }
 a:hover, a:visited, a:link, a:active {
     text-decoration: none;
+}
+#mainContent {
+	position:relative;
+	width: 85%;
+	margin: 0 auto;
+	padding: 0 10px;
+	top:-50px;
 }
 #myCanvas {
 	position: absolute;

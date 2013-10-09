@@ -1,33 +1,39 @@
 <!--Nate Sutton
-	Copyright 2013
-	
-	This page diplays all tags organized by category.  A form processes links
-	generated with each tag to retreive more information about it.
-	-->
+Copyright 2013
+
+This page diplays all tags organized by category.  A form processes links
+generated with each tag to retreive more information about it.
+-->
 <head>
-<%= stylesheet_link_tag    "middle_section_page", :media => "all" %>
-<%= javascript_include_tag "form_processing" %>
+	<%= javascript_include_tag "form_processing" %>
 </head>
 <body>
-<div class='TextInBarRoundedBorder YellowBar'>Tag Categories</div>
-<br>
-<br>
-<br>
-<form action="/tag_navigator/tag_details" method="post" id='generalForm'>
-	<input id="parameterName" name="parameterName" type="hidden" />
-	<% for tagCategoryEntryIndex in (0..@TagCategoryList.length - 1) %>
-	<div class="rounded-corners outer-shadows" id="TextBox">
-		<div id="TextBoxHeader">
-			<%= @TagCategoryList[tagCategoryEntryIndex][0] %>
+	<%= render :partial => 'nmsuttondetails/generalBeginningSection' %>
+	<div id="mainContent">
+		<div class='TextInBarRoundedBorder YellowBar'>
+			Tag Categories
 		</div>
-		<% for tagEntryIndex in (1..@TagCategoryList[tagCategoryEntryIndex].length - 1) %>
-		<div id="TextBoxBody">
-			<%= link_to @TagCategoryList[tagCategoryEntryIndex][tagEntryIndex], "javascript:processTagLink(\'"+@TagCategoryList[tagCategoryEntryIndex][tagEntryIndex]+"\')" %>
+		<br>
+		<br>
+		<br>
+		<form action="/tag_navigator/tag_details" method="post" id='generalForm'>
+			<input id="parameterName" name="parameterName" type="hidden" />
+			<% for tagCategoryEntryIndex in (0..@TagCategoryList.length - 1) %>
+			<div class="rounded-corners outer-shadows" id="TextBox">
+				<div id="TextBoxHeader">
+					<%= @TagCategoryList[tagCategoryEntryIndex][0] %>
+				</div>
+				<% for tagEntryIndex in (1..@TagCategoryList[tagCategoryEntryIndex].length - 1) %>
+				<div id="TextBoxBody">
+					<%= link_to @TagCategoryList[tagCategoryEntryIndex][tagEntryIndex], "javascript:processTagLink(\'"+@TagCategoryList[tagCategoryEntryIndex][tagEntryIndex]+"\')" %>
+				</div>
+				<% end %>
+			</div>
+			<% end %>
+		</form>
+		<br>
+		<div class="RectangleButton">
+			<h5><a href="javascript:history.back()">Previous page</a></h5>
 		</div>
-		<% end %>
 	</div>
-	<% end %>
-</form>
-<br>
-<div class="RectangleButton"><h5><a href="javascript:history.back()">Previous page</a></h5></div>
 </body>

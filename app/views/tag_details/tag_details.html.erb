@@ -1,36 +1,45 @@
 <!--Nate Sutton
-	Copyright 2013
-	
-	This page displays descriptions relevant to a specific tag if any are found.
-	
-	References:
-	http://stackoverflow.com/questions/8814472/how-to-make-an-html-back-link
-	-->
+Copyright 2013
 
-<head>
-	<%= stylesheet_link_tag    "middle_section_page" %>
-</head>
+This page displays descriptions relevant to a specific tag if any are found.
+
+References:
+http://stackoverflow.com/questions/8814472/how-to-make-an-html-back-link
+-->
 <body>
-<div class='TextInBarRoundedBorder'>Selected Experience With <%= @tagName %></div>
-<br>
-<br>
-<p>
-	<% if @ProjectsWithTag.length > 0 then %>
-		<div class='TextInBarRoundedBorder SubHeaderTextInBar GreenBar'>Projects</div>
-	<%= @RelevantProjectDescriptions %>
-	<% end %>
-</p>
-<p>
-	<% if @JobsWithTag.length > 0 then %>
-		<div class='TextInBarRoundedBorder SubHeaderTextInBar YellowBar'>Jobs</div>
-	<%= @RelevantJobDescriptions %>
-	<% end %>
-</p>
-<p>
-	<% if @ClassesWithTag.length > 0 then %>
-		<div class='TextInBarRoundedBorder SubHeaderTextInBar'>Classes</div>
-	<%= @RelevantClassDescriptions %>
-	<% end %>
-</p>
-<div class="RectangleButton"><h5><a href="javascript:history.back()">Previous page</a></h5></div>
+	<%= render :partial => 'nmsuttondetails/generalBeginningSection' %>
+	<div id="mainContent">
+		<div class='TextInBarRoundedBorder'>
+			Selected Experience With <%= @tagName %>
+		</div>
+		<br>
+		<br>
+		<p>
+			<% if @ProjectsWithTag.length > 0 then %>
+			<div class='TextInBarRoundedBorder SubHeaderTextInBar GreenBar'>
+				Projects
+			</div>
+			<%= @RelevantProjectDescriptions %>
+			<% end %>
+		</p>
+		<p>
+			<% if @JobsWithTag.length > 0 then %>
+			<div class='TextInBarRoundedBorder SubHeaderTextInBar YellowBar'>
+				Jobs
+			</div>
+			<%= @RelevantJobDescriptions %>
+			<% end %>
+		</p>
+		<p>
+			<% if @ClassesWithTag.length > 0 then %>
+			<div class='TextInBarRoundedBorder SubHeaderTextInBar'>
+				Classes
+			</div>
+			<%= @RelevantClassDescriptions %>
+			<% end %>
+		</p>
+		<div class="RectangleButton">
+			<h5><a href="javascript:history.back()">Previous page</a></h5>
+		</div>
+	</div>
 </body>

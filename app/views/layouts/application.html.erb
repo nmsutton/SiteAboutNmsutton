@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>SiteAboutNMSutton</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Site About NMSutton</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= stylesheet_link_tag    "main_page", "middle_section_page", :media => "all" %>
+		<%= javascript_include_tag "http://www.html5canvastutorials.com/libraries/three.min.js" %>
+		<meta name="keywords" content="Nate Sutton, work, work experience, resume" />
+		<%= csrf_meta_tags %>
+	</head>
+			
+		
+		<%= yield %>
+		
+	
 </html>
