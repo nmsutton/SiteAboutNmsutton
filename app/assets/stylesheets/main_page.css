@@ -65,8 +65,8 @@ body {
 	left:79%;
 	z-index: 2;		
 }
-#noImageBorder {
-	border:0;
+img {
+  border-width: 0;
 }
 #backgroundWatermark {
 	position:absolute;
