@@ -63,7 +63,7 @@
 				<div id="TextBoxBody">
 <div id="AlignImageToLeft">
 <a href='http://nmsutton.herokuapp.com/work_category_content/projects'><img style='height:100px;width:110px' src='/assets/ArticleThumb.jpg'><img style='height:100px;width:80px' src='/assets/PosterThumb.jpg'></a></div>
-<div id="AlignTextToRight2">Some further examples of my past machine learning related computational biology research can be seen in my <a href='http://nmsutton.herokuapp.com/work_category_content/projects'>publication, posters, and abstracts.</a>
+<div id="AlignTextToRight2">Some further examples of my past machine learning related computational biology research can be seen in my <a href='http://nmsutton.herokuapp.com/work_category_content/pubpostabs'>publication, posters, and abstracts.</a>
 					<br>
 					<br>
 </div>
