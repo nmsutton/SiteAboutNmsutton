@@ -13,6 +13,18 @@
 	</Education>
 	<Work>
 		<WorkEntry>
+			<TimeRange>July 2014 - Current</TimeRange>
+			<Description>Reinforcement learning with Spiking Neural Networks, unfunded, Cambridge, Ma, *  Reimplimented simulation based on published work.  Project: <a Target='_blank' href='Tinyurl.com/ksm6wgq'>Tinyurl.com/ksm6wgq</a>  *  Image based classification of characters was performed using Python. *  In collaboration with another individual who holds a master’s and works in computational neuroscience.  STDP: Pre and post-synapse spikes modified synapse strength.  Active Dendrites and Direct to Soma Neuron Dynamics: Detailed neuron characteristics with signal processing.  Lateral Inhibition: Neuron interconnections created competition for spike propagation.  Learning Rate: A first layer of integrate-and-fire neurons were translated into second layer spikes with specific learning rates and resistance factors.  Neuroscience Toolkit: Brian 2 code integrated. </Description>
+		</WorkEntry>
+		<WorkEntry>
+			<TimeRange>October 2014 - December 2014</TimeRange>
+			<Description>Emotion Neuropsychology Experiment Software Development, unfunded,  *  Existing code was expanded on to present images as emotion stimulus with precise timing, format, and multiple randomization methods.  Limited sample: tinyurl.com/o3a74w6 *  Subjects’ keypress reactions were recorded.   *  Data and metadata was stored to accommodate analysis of synchronized neural image recordings.   *  In collaboration with a postdoc at MIT, Cambridge, MA. </Description>
+		</WorkEntry>
+		<WorkEntry>
+			<TimeRange>April 2014 - Current</TimeRange>
+			<Description>Remote Services Technician at Support.com, Cambridge, Ma, Provided Information Technology home networking technical support remotely</Description>
+		</WorkEntry>
+		<WorkEntry>
 			<TimeRange>January 2011 - August 2011</TimeRange>
 			<Description>Research Assistant at Arizona State University, Pheonix, Az, Java programming using original code, open source programs, and reimplemented programs for a project which researched automatic extraction of text descriptions of gene and drug interactions.  A large science article database was automatically processed to extract and randomly select sentences containing genes and drugs.  Open source modules were integrated including JDom for XML, a database API, and English language processing tools.  The software was optimized for statistical analyses with an open source machine learning tool.  Lead and trained a team of coworkers to generate datasets used in the project, the work was refined over time based on coworker feedback.  The work was published in a science conference at http://www.aclweb.org/anthology/W12-2427</Description>
 		</WorkEntry>
@@ -34,6 +46,14 @@
 		</WorkEntry>
 	</Work>
 	<Projects>
+		<Project>
+			<TimeRange>PUBLICATIONS</TimeRange>
+			<Description>Sutton, N., Wojtulewicz, L., Mehta, N., Gonzalez, G. (2012, June). Automatic approaches for gene-drug interaction extraction from biomedical text: corpus and comparative evaluation. In Proceedings of the 2012 Workshop on Biomedical Natural Language Processing (pp. 214-222). Association for Computational Linguistics. http://aclweb.org/anthology/W12-2427</Description>
+		</Project>
+		<Project>
+			<TimeRange>CONFERENCE ABSTRACTS AND POSTER PRESENTATIONS</TimeRange>
+			<Description>Sutton, N., Wojtulewicz, L., Mehta, N.,  Gonzalez, G. (2012). Automatic approaches for gene-drug interaction extraction from biomedical text: corpus and comparative evaluation. Poster + Paper, In Proceedings of the 2012 Workshop on Biomedical Natural Language Processing, Montreal, Ca  nmsutton.herokuapp.com/assets/BioNLP12.pdf  Sutton N, Gonzalez G. (2012) Using Natural Language Processing to Automatically Extract Alzheimer’s Disease Related Genotype-Phenotype and Pharmacogenomic Findings. Poster + Abstract, Arizona Alzheimer’s Consortium Conference, Pheonix, Az  nmsutton.herokuapp.com/assets/AAC12.pdf  Sutton N, Gonzalez G. Extracting Genotype-Phenotype Relationships From Literature Using Natural Language Processing (2011), Poster, Biomedical Informatics Symposium, Pheonix, Az  nmsutton.herokuapp.com/assets/BMISymp2011.pdf</Description>
+		</Project>
 		<Project>
 			<TimeRange>10/09 - 11/09, 01/10 - 04/10</TimeRange>
 			<Description>Worked on a tool for automating science experiments using Apache Tomcat, Html, the Liferay web portal, CSS, and briefly Java including servelets with JDBC, MySql, and PostgreSQL.</Description>
@@ -80,7 +100,7 @@
 		</Project>
 		<Project>
 			<TimeRange>02/13 - 03/13, 06/13, 08/13</TimeRange>
-			<Description>Programming contributions have been made to the Biopython project. My previous and ongoing work can be found at and biopython.org .  Some technologies worked with are Python, Matplotlib, Eclipse with Pydev, Fasttree, and others.</Description>
+			<Description> Contribution of software features to the Biopython open source project.  Biopython.org and github.com/nmsutton.  Added Matplotlib plotting options, C++ to Python wrapping, series of tests.  Some technologies worked with are Python, Matplotlib, Eclipse with Pydev, Fasttree, and others.</Description>
 		</Project>
 		<Project>
 			<TimeRange>06/13 - 07/13</TimeRange>
@@ -93,6 +113,10 @@
 		<Project>
 			<TimeRange>09/13 - 10/13</TimeRange>
 			<Description>Developed a web site for sharing professional and personal details of myself.  Technologies used include Ruby, Ruby on Rails, XML, MySQL, Html5, Github, JQuery, Html, Css, Java Script, and others.</Description>
+		</Project>
+		<Project>
+			<TimeRange>01/14 – 02/14</TimeRange>
+			<Description>Web Developer, Arizona State University, Pheonix, Az *  Contributed to a backend redesign of a science lab site including security, file, and user management.  github.com/nmsutton/DiegoLabSite</Description>
 		</Project>
 	</Projects>
 	<Classes>
@@ -115,6 +139,18 @@
 		<Class>
 			<TimeRange>2005</TimeRange>
 			<Description>Independent Study in Bioinformatics: A variety of bioinformatics programs were taught and created in Ruby including sequence alignment, sequence processing, mutation simulation, and others.</Description>
+		</Class>
+		<Class>
+			<TimeRange>2003</TimeRange>
+			<Description>Human Anatomy and Physiology:  A section described neuroanatomy and neurophysiology including properties of neuron cells and their connection to some functions of the body.</Description>
+		</Class>
+		<Class>
+			<TimeRange>2009</TimeRange>
+			<Description>Applied Biostatistics in Medicine and Informatics:  The course included a comprehensive treatment of statistical methods often used to analyze data collected in medical and biomedical informatics studies. </Description>
+		</Class>
+		<Class>
+			<TimeRange>Degrees</TimeRange>
+			<Description>Arizona State University, Phoenix AZ 85004 Master’s of Science in Biomedical Informatics, 2012, GPA 3.98/4.00 Quinnipiac University, Hamden CT 06518 Bachelor of Science in Biology, 2005</Description>
 		</Class>
 	</Classes>
 	<ComputerSkills>Languages:	Java, Python, Perl, C++, C, Ruby, Html, Java Script, XML, R, Briefly MatLab.

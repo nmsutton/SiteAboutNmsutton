@@ -1,0 +1,92 @@
+<head>
+	<%= stylesheet_link_tag    "welcome_page" %>
+</head>
+<body>
+	<%= render :partial => 'nmsuttondetails/generalBeginningSection' %>
+	<div id="mainContent">
+		<div class='TextInBarRoundedBorder'>
+			Welcome to this site!
+		</div>
+		<p>
+			<div class="rounded-corners outer-shadows" id="TextBox">
+				<div id="AlignTextToLeft">
+						For the latest information and explanation about some of my research please see this <a target='_blank' href='http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/FFSSN.ipynb'>page</a>.  I am currently working on research with reinforcement learning using spiking neural network algorithms.  Specifically the research includes spike time dependent plasticity, active dentrites, and direct soma input.  Examples of results from my research currently are training neurons to recognize image data, specifically input neurons are pixels in English characters shown in the image below, output neurons represent the characters.  The current research includes processing the full alphabet, four example letters are shown in images below (this is an example of good training but some times issues occur like 'B' and 'D' having the same neuron).
+						<br>
+<a href="javascript:window.open('http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/FFSSN.ipynb');window.open('http://nmsutton.herokuapp.com/assets/Weights3dBar2.jpg')"><img style='height:200px;width:268px' src='/assets/Weights3dBar2Thumb3.jpg'></a>
+						<a href="javascript:window.open('http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/FFSSN.ipynb');window.open('http://nmsutton.herokuapp.com/assets/Weights3dBar.jpg')"><img style='height:200px;width:268px' src='/assets/Weights3dBarThumb3.jpg'></a>
+						<a href="javascript:window.open('http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/FFSSN.ipynb');window.open('http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/img/26charTest.jpg')"><img style='height:200px;width:334px' src='/assets/TestThumb3.jpg'></a>
+					<br>
+					<br>
+				</div>
+				<div id="welcome_page_contact">
+					<img src="/assets/365ef003-22f41a8b39aa2ff0f72da30868be6646.png">
+					<br>
+					<img src="/assets/email2.png"> awjnonq421005
+					<div id="AlignTextToRight">
+						(at) google mail
+					</div>
+					<div id="MoveContactLinksUp">
+						<a href="javascript:window.open('http://www.linkedin.com/profile/view?id=158606336')"><img src="/assets/13318153971618485437linkedin-md2.png"></a>
+						<a href="javascript:window.open('http://www.github.com/nmsutton')"><img src="/assets/github3.png"></a>
+						<br>
+						<a href="javascript:window.open('http://www.facebook.com/nate.sutton.98')"><img src="http://i.imgur.com/GxbrVXH.png"></a>
+					</div>
+				</div>
+			</div>
+		</p>
+		<p>
+			<div class="rounded-corners outer-shadows" id="TextBox">
+				<div id="TextBoxBody">
+<div id="AlignImageToLeft2">
+<a href="http://nmsutton.herokuapp.com/work_category_content/classes"><img style='height:65px;width:190px' src='/assets/UnivThumb.jpg'></a></div>
+<div id="AlignTextToRight2">I have worked on a variety of different types of computational biology research during and outside of my biomedical informatics master's and am concentrating on computational neuroscience research.  You are welcome to take a look at the current code from the work <a target='_blank' href='https://github.com/tartavull/snn-rl'>here</a> or also look at my computational biology and other code <a target='_blank' href='https://github.com/nmsutton'>here</a> .
+					<br>
+					<br>
+</div>
+				</div>
+			</div>
+		</p>
+		<p>
+			<div class="rounded-corners outer-shadows" id="TextBox">
+				<div id="TextBoxBody">
+				<div id="AlignImageToLeft">
+<a href='http://nmsutton.herokuapp.com/tag_navigator/tag_navigator.html'><img style='height:75px;width:100px' src='/assets/SiteThumb.jpg'><img style='height:35px;width:90px' src='/assets/BiopyThumb.jpg'></a></div>
+				<div id="AlignTextToRight2">I have gained experience with a variety of different programming languages, technologies, and best practices.  Some more details are <a href='http://nmsutton.herokuapp.com/tag_navigator/tag_navigator.html'>here</a> and <a href='http://nmsutton.herokuapp.com/work_category_content/projects'>here</a>.
+					<br>
+					<br>
+</div>
+				</div>
+			</div>
+		</p>
+		<p>
+			<div class="rounded-corners outer-shadows" id="TextBox">
+				<div id="TextBoxBody">
+<div id="AlignImageToLeft">
+<a href='http://nmsutton.herokuapp.com/work_category_content/projects'><img style='height:100px;width:110px' src='/assets/ArticleThumb.jpg'><img style='height:100px;width:80px' src='/assets/PosterThumb.jpg'></a></div>
+<div id="AlignTextToRight2">Some further examples of my past machine learning related computational biology research can be seen in my <a href='http://nmsutton.herokuapp.com/work_category_content/projects'>publication, posters, and abstracts.</a>
+					<br>
+					<br>
+</div>
+				</div>
+			</div>
+		</p>
+		<p>
+			<div class="rounded-corners outer-shadows" id="TextBox">
+				<div id="TextBoxBody">
+					Additional technical details include that this web application was designed with Ruby on Rails.  MySql is used for the database and Html5 is the source of the 3d menu above.  A CSS 'nightlight' template from templatemo.com was added for style formatting.  In Ruby, the nokogiri gem is used for xml parsing and a activerecord-import gem is used for efficient processing of database loading.  Github is used for code storage and sharing.  JQuery is utilized in multiple places and a javascript library for rounded edges of rectangle containers from htmlremix.com is included.
+					<br>
+					<br>
+				</div>
+			</div>
+		</p>
+		<p>
+			<div class="rounded-corners outer-shadows" id="TextBox">
+				<div id="TextBoxBody">
+					I hope you enjoy the site!
+					<br>
+				</div>
+			</div>
+		</p>
+	</div>
+	</div>
+</body>

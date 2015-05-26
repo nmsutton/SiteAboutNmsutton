@@ -81,6 +81,8 @@ SiteAboutNMSutton::Application.routes.draw do
   match '/work_category_content/jobs' => 'work_category_content#jobs'
   
   match '/work_category_content/classes' => 'work_category_content#classes'
+
+  match '/work_category_content/pubpostabs' => 'work_category_content#pubpostabs'
   
   match '/nmsuttondetails/NateSuttonResume' => 'nmsuttondetails#NateSuttonResume'
 end

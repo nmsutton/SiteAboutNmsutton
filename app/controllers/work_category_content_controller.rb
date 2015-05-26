@@ -23,6 +23,10 @@ class WorkCategoryContentController < ApplicationController
   def classes
     prepareWorkCategoryDisplay('Classes', Classe)
   end
+
+  def pubpostabs
+    prepareWorkCategoryDisplay('Pubpostabs', Pubpostab)
+  end
   
   def prepareWorkCategoryDisplay(keyword, category)
     @workCategoryKeyword = keyword

@@ -1,6 +1,195 @@
 <?xml version= "1.0"?>
 <root>
 	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>Rate Coding
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>Temporal Coding
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>STDP
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>Oscillation Coding (still learning)
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>Differential Equations
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>Place Cells (still learning)
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>Grid Cells (still learning)
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>Population Coding (still learning)
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Signal Processing</Category>
+		<Tag>Neural Ensembles (still learning)
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Neural Networks</Category>
+		<Tag>Forward Propagation
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Neural Networks</Category>
+		<Tag>Backpropagation
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Neural Networks</Category>
+		<Tag>Excitatory and Inhibitory Balancing
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Neural Networks</Category>
+		<Tag>Lateral Inhibition
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Neural Networks</Category>
+		<Tag>Learning Rate
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Neural Networks</Category>
+		<Tag>Neurocience Toolkit
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Biophysics</Category>
+		<Tag>Active Dendrites
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Biophysics</Category>
+		<Tag>Direct to Soma
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Biophysics</Category>
+		<Tag>Single Neurons Signal Accumulation
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Biophysics</Category>
+		<Tag>Graphical Plotting
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Machine Learning</Category>
+		<Tag>Hidden Markov Models
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Machine Learning</Category>
+		<Tag>Support Vector Machines
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Machine Learning</Category>
+		<Tag>Neural Nets
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Machine Learning</Category>
+		<Tag>Principle Components Analysis
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Machine Learning</Category>
+		<Tag>Gradient Decent
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Genetics</Category>
+		<Tag>Next Generation Sequencing
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Genetics</Category>
+		<Tag>Disease Association Studies
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Genetics</Category>
+		<Tag>Population Genomics
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Genetics</Category>
+		<Tag>Stem Cells
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Genetics</Category>
+		<Tag>Transcription Factors
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Genetics</Category>
+		<Tag>Chi-Square
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Genetics</Category>
+		<Tag>Regression Statistics
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Genetics</Category>
+		<Tag>Data Cleaning
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Online Courses</Category>
+		<Tag>Neuronal Dynamics with EPFL Prof at edX
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Online Courses</Category>
+		<Tag>Neural Networks for Machine Learning with U of Toronto Prof on Coursera
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Online Courses</Category>
+		<Tag>Computational Neuroscience with U of Wash Profs on Coursera
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Online Courses</Category>
+		<Tag>Machine Learning with Stanford U. Prof on Coursera
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Books</Category>
+		<Tag>Theoretical Neuroscience
+</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
+		<Category>Comp Neuro Books</Category>
+		<Tag>Spikes: Exploring the Neural Code</Tag>
+	</TagWithCategory>
+	<TagWithCategory>
 		<Category>Operating Systems</Category>
 		<Tag>Linux</Tag>
 	</TagWithCategory>
