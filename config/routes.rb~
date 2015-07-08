@@ -83,8 +83,11 @@ SiteAboutNMSutton::Application.routes.draw do
   match '/work_category_content/classes' => 'work_category_content#classes'
 
   match '/work_category_content/pubpostabs' => 'work_category_content#pubpostabs'
-
-  match '/work_category_content/nmsutton.herokuapp.com/assets/BioNLP12.pdf' => 'work_category_content#bionlp12'
   
   match '/nmsuttondetails/NateSuttonResume' => 'nmsuttondetails#NateSuttonResume'
+
+  match '/nmsuttondetails/PlottingVisualReceptors' => 'nmsuttondetails#PlottingVisualReceptors'
+
+  #match '/nmsuttondetails/Plotting_Visual_Receptors%20--%20Sage_files/:file' => 'nmsuttondetails#PlottingVisualReceptors'
+  get '/nmsuttondetails/Plotting_Visual_Receptors%20--%20Sage_files/:file', to: 'nmsuttondetails#PlottingVisualReceptors'
 end

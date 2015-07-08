@@ -1,0 +1,12 @@
+class NmsuttondetailsController < ApplicationController
+  def index
+  end
+  
+  def NateSuttonResume
+    render '/nmsuttondetails/NateSuttonResume.html'
+  end
+
+  def PlottingVisualReceptors
+    render '/nmsuttondetails/Plotting_Visual_Receptors%20--%20Sage_files/'+params[:file]
+  end
+end

@@ -10,7 +10,13 @@
 		<p>
 			<div class="rounded-corners outer-shadows" id="TextBox">
 				<div id="AlignTextToLeft">
-						For the latest information and explanation about some of my research please see this <a target='_blank' href='http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/FFSSN.ipynb'>page</a>.  I am currently working on research with reinforcement learning using spiking neural network algorithms.  Specifically the research includes spike time dependent plasticity, active dentrites, and direct soma input.  Examples of results from my research currently are training neurons to recognize image data, specifically input neurons are pixels in English characters shown in the image below, output neurons represent the characters.  The current research includes processing the full alphabet, four example letters are shown in images below (this is an example of good training but some times issues occur like 'B' and 'D' having the same neuron).
+						<A target='_blank' href='http://nmsutton.herokuapp.com/nmsuttondetails/PlottingVisualReceptors'>Visual Filter Response Simulations Plotted Using Self-Organizing Maps
+						<br><img width="200" height="150" src="/assets/gaborFunct.png"> 
+						<img width="200" height="150" src="/assets/diffGaus.png">
+						<img width="200" height="150" src="/assets/lXHprpR.png"></a><br>
+						<hr>
+						<br><a target='_blank' href='http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/FFSSN.ipynb'>Reinforcement Learning Using Spiking Neural Networks</a>
+						<br>Specifically this research includes spike time dependent plasticity, active dentrites, and direct soma input.  Examples of results from my research currently are training neurons to recognize image data, specifically input neurons are pixels in English characters shown in the image below, output neurons represent the characters.  The current research includes processing the full alphabet, four example letters are shown in images below (this is an example of good training but some times issues occur like 'B' and 'D' having the same neuron).
 						<br>
 <a href="javascript:window.open('http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/FFSSN.ipynb');window.open('http://nmsutton.herokuapp.com/assets/Weights3dBar2.jpg')"><img style='height:200px;width:268px' src='/assets/Weights3dBar2Thumb3.jpg'></a>
 						<a href="javascript:window.open('http://nbviewer.ipython.org/github/tartavull/snn-rl/blob/master/FFSSN.ipynb');window.open('http://nmsutton.herokuapp.com/assets/Weights3dBar.jpg')"><img style='height:200px;width:268px' src='/assets/Weights3dBarThumb3.jpg'></a>
@@ -63,7 +69,7 @@
 				<div id="TextBoxBody">
 <div id="AlignImageToLeft">
 <a href='http://nmsutton.herokuapp.com/work_category_content/projects'><img style='height:100px;width:110px' src='/assets/ArticleThumb.jpg'><img style='height:100px;width:80px' src='/assets/PosterThumb.jpg'></a></div>
-<div id="AlignTextToRight2">Some further examples of my past machine learning related computational biology research can be seen in my <a href='http://nmsutton.herokuapp.com/work_category_content/projects'>publication, posters, and abstracts.</a>
+<div id="AlignTextToRight2">Some further examples of my past machine learning related computational biology research can be seen in my <a href='http://nmsutton.herokuapp.com/work_category_content/pubpostabs'>publication, posters, and abstracts.</a>
 					<br>
 					<br>
 </div>

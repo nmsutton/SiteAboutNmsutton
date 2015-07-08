@@ -5,4 +5,8 @@ class NmsuttondetailsController < ApplicationController
   def NateSuttonResume
     render '/nmsuttondetails/NateSuttonResume.html'
   end
+
+  def PlottingVisualReceptors
+    render '/nmsuttondetails/PlottingVisualReceptors.html'
+  end
 end

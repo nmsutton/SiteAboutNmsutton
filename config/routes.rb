@@ -85,4 +85,6 @@ SiteAboutNMSutton::Application.routes.draw do
   match '/work_category_content/pubpostabs' => 'work_category_content#pubpostabs'
   
   match '/nmsuttondetails/NateSuttonResume' => 'nmsuttondetails#NateSuttonResume'
+
+  match '/nmsuttondetails/PlottingVisualReceptors' => 'nmsuttondetails#PlottingVisualReceptors'
 end

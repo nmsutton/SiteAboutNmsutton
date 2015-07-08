@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost:8080/home/admin/0/print -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Plotting_Visual_Receptors -- Sage</title>
+        
+	
+        
+        <link type="text/css" rel="stylesheet" href="/assets/main.css">
+        
+        
+        <script type="text/javascript" src="/assets/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/assets/localization.js"></script>
+        <script type="text/javascript" src="/assets/json2.min.js"></script>
+        
+
+<!-- trying to work around JSmol collisions with jquery--->
+<script type="text/javascript" src="/assets/jquery-1.11.0.min.js"></script>
+<!-- jQuery UI - interacts, widgets, drag-drop, etc. -->
+<link rel="stylesheet" href="http://localhost:8080/javascript/jqueryui/css/sage/jquery-ui-1.10.4.custom.css">
+<script type="text/javascript" src="/assets/jquery-ui-1.10.4.custom.min.js"></script>
+
+<!-- jQuery plugins - color pickers, shift-click, AJAX forms, IE fixes, notifications -->
+<link rel="stylesheet" href="/assets/farbtastic.css" type="text/css">
+<script type="text/javascript" src="/assets/farbtastic.min.js"></script>
+<script type="text/javascript" src="/assets/jquery.event.extendedclick.min.js"></script>
+<script type="text/javascript" src="/assets/jquery.form.min.js"></script>
+<script type="text/javascript" src="/assets/jquery.bgiframe.min.js"></script>
+<link rel="stylesheet" href="/assets/jPicker-1.1.6.min.css" type="text/css">
+<script type="text/javascript" src="/assets/jpicker-1.1.6.min.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="/assets/colorpicker.css">
+<script type="text/javascript" src="/assets/colorpicker.min.js"></script>
+<script type="text/javascript" src="/assets/ui.achtung-mod.min.js"></script>
+
+<!-- Jmol - embedded 3D graphics **needs to be before jmol_lib.js** -->
+<script type="text/javascript" src="/assets/JSmol.min.nojq.js"></script>
+
+
+<script type="text/javascript" src="/assets/notebook_lib.js"></script>
+<script type="text/javascript" src="/assets/notebook_dynamic.js"></script>
+
+
+
+<script type="text/javascript" src="/assets/MathJax.js"></script>
+
+
+<!-- Sage3d - accelerated 3D graphics -->
+<script type="text/javascript" src="/assets/sage3d.js"></script>
+
+
+<!-- TinyMCE and jEditable - in-place editing of text cells -->
+<script type="text/javascript" src="/assets/tiny_mce.js"></script>
+<script type="text/javascript" src="/assets/jquery.jeditable.mini.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/tinymce.js"></script>
+<script type="text/javascript" src="/assets/embed.js"></script>
+
+
+<script type="text/javascript">user_name= "guest";</script>
+
+<script type="text/javascript">
+    worksheet_filename = "admin/0";
+    worksheet_name = 'Plotting_Visual_Receptors';
+    
+        server_ping_while_alive();
+    
+</script>
+
+
+
+        
+        
+        
+        <script type="text/javascript" src="/assets/master.js"></script>
+    <script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">.MathJax_Preview .MJXc-math {color: inherit!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+.MathJax .mo, .MathJax .mi {color: inherit ! important}
+</style><style type="text/css">.MJXc-script {font-size: .8em}
+.MJXc-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXc-bold {font-weight: bold}
+.MJXc-italic {font-style: italic}
+.MJXc-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-largeop {font-size: 150%}
+.MJXc-largeop.MJXc-int {vertical-align: -.2em}
+.MJXc-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXc-display {display: block; text-align: center; margin: 1em 0}
+.MJXc-math span {display: inline-block}
+.MJXc-box {display: block!important; text-align: center}
+.MJXc-box:after {content: " "}
+.MJXc-rule {display: block!important; margin-top: .1em}
+.MJXc-char {display: block!important}
+.MJXc-mo {margin: 0 .15em}
+.MJXc-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXc-denom {display: inline-table!important; width: 100%}
+.MJXc-denom > * {display: table-row!important}
+.MJXc-surd {vertical-align: top}
+.MJXc-surd > * {display: block!important}
+.MJXc-script-box > *  {display: table!important; height: 50%}
+.MJXc-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXc-script-box > *:last-child > * {vertical-align: bottom}
+.MJXc-script-box > * > * > * {display: block!important}
+.MJXc-mphantom {visibility: hidden}
+.MJXc-munderover {display: inline-table!important}
+.MJXc-over {display: inline-block!important; text-align: center}
+.MJXc-over > * {display: block!important}
+.MJXc-munderover > * {display: table-row!important}
+.MJXc-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXc-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXc-mtr {display: table-row!important}
+.MJXc-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXc-mtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-mlabeledtr {display: table-row!important}
+.MJXc-mlabeledtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mlabeledtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXc-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXc-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXc-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXc-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXc-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXc-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXc-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXc-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXc-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXc-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_CHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+    <body id="print-page" class="" style="cursor: default;" bgcolor="white"><div id="MathJax_Message" style="display: none;"></div><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div>
+        
+
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_21">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_21">
+                            <div class="cell_output_print_wrap" id="cell_output_21">
+                                
+                                    <pre class="shrunk"><font color="black"><font size="10"><b></b></font><center><font size="10"><b><br>Simulating Visual Filter Responses Plotted with <br><br>Self-Organizing Maps</b></font>
+<br><font size="6"><u>Visual Receptive Fields that have firing rate effected by <b>direction of motion</b> of stimulus and <b>time</b></u></font></center>
+<br>Below the plots is a math worksheet explaining concepts that go into the plot.  The end result plot is shown
+below with x and y dimentions representing angle of stimulus.  Z (depth) dimension is the firing rate.  
+Time passing is processed as a dimension represented by tau in the equations (Dayan and Abbott, pg 71).
+
+<center><font size="6"><a target="_blank" href="https://github.com/nmsutton/DisplacementMapper" style="color: rgb(0,0,200)">Open source code availible</a></font></center>
+Plotting of the simulation is generated with <b>a new original displacement mapping program</b> for general 
+conversion of 2d to 3d graphics.  <b>Self organizing maps (SOM)</b> were implemented to smooth motion of verticies 
+in the plotting, neighbor verticies are pulled with each movement of verticies.  The use of SOM was inspired by a 
+<a target="_blank" href="https://class.coursera.org/compneuro-003/lecture/77" style="color: rgb(0,0,200)">Comp Neuro Coursera video (timepoint 9:30)</a>.  <b>Custom openGL C++ 3d graphics</b> code has been created.
+This is a Sage workbook.  <i>* I'll add more legends, units, and captions for the plots later *</i>
+<br><font size="10">2D: </font><iframe width="640" height="480" src="https://www.youtube.com/embed/A6DQtIW3FMs" frameborder="0" allowfullscreen=""></iframe><font size="10"> 3D: </font><iframe width="640" height="480" src="https://www.youtube.com/embed/6r3VQLyBjkU" frameborder="0" allowfullscreen=""></iframe>
+<br><center><font size="6"><u>Spatial Receptive Fields of LGN Visual Receptors</u></font></center> 
+<br>The difference of gaussians math method was used for the simulation (Dayan and Abbott, pg 77).
+<br>More details on the LGN simulation past the gabor section below.
+<br><font size="10">2D: </font><iframe width="640" height="480" src="https://www.youtube.com/embed/lgqf13Jmf2A" frameborder="0" allowfullscreen=""></iframe><font size="10"> 3D: </font><iframe width="640" height="480" src="https://www.youtube.com/embed/P7ANReCfpVE" frameborder="0" allowfullscreen=""></iframe>
+<br><center><font size="6"><u>Space-time receptive feild of a cat LGN X cell (Dayan and Abbott, pg 78)</u></font></center>
+<br><font size="10">2D: </font><a href="/assets/diffGSTScaled2Rotated.jpg"><img width="640" height="360" src="/assets/diffGSTScaled2Rotated.jpg"></a><font size="10"> 3D: </font><a href="/assets/lXHprpR.png"><img width="640" height="360" src="/assets/lXHprpR.png"></a></font></pre><a href="/assets/lXHprpR.png">
+                                
+                            </a></div><a href="/assets/lXHprpR.png">
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_21">
+                                    
+                                </div>
+                        </a></div><a href="/assets/lXHprpR.png">
+                    </a></td>
+                </tr>
+            </tbody></table>
+        </div>
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_1" class="cell_visible">
+    <div id="cell_1" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black">'''
+Temporal structure of a visual receptive feild.
+This can simulate changes due to time of the fields
+(Dayan and Abbott, pg 66)
+'''
+ms = .001
+a = 1/15
+tau = var('tau')
+time = a*exp(-a*tau)*((((a*tau)^5)/factorial(5))-(((a*tau)^7)/factorial(7)))
+plot(time, (tau,0,200))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_1" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_1">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_1">
+                            <div class="cell_output_print_wrap" id="cell_output_1">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_1">
+                                    <img src="/assets/sage0.png">
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_2" class="cell_visible">
+    <div id="cell_2" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black">'''
+Transformation of space (in angle degrees of visual stimulus input) to time values
+(Dayan and Abbott, pg 72)
+'''
+psi = pi/9
+c = .02
+x = var('x')
+tau = var('tau')
+xPrime(x,tau) = (x*cos(psi))-((c*tau)*sin(psi))
+plot3d(xPrime, (x, -3, 3), (tau, 0, 200))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_2" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_2">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_2">
+                            <div class="cell_output_print_wrap" id="cell_output_2">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_2">
+                                    
+<div id="sage_jmol_2" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_2" style="display:none;">500</div>
+    <div id="sage_jmol_img_2" style="display:none;">/home/admin/0/cells/2/.jmol_images/sage0-size500.jmol.png?1436246371.06</div>
+    <div id="sage_jmol_script_2" style="display:none;">/home/admin/0/cells/2/sage0-size500.jmol?1436246371.06</div>
+    <div id="sage_jmol_server_url_2" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_2" style="display:none;">Activated</div>
+<div id="jmolApplet0" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet0_wrapper" style="height:100%;width:100%;"><div id="jmolApplet0_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet0_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet0_coverimage" src="/assets/sage0-size500.jmol.png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet0, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet0_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet0, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet0_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet0_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet0_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet0_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet0_infoheaderspan"></span><span id="jmolApplet0_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet0,false)">[x]</a></span></div><div id="jmolApplet0_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_3" class="cell_visible">
+    <div id="cell_3" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black">'''
+Time variable translated due to angle in degrees (space) of visual stimulus
+(Dayan and Abbott, pg 72)
+'''
+psi = pi/9
+c = .02
+x = var('x')
+tau = var('tau')
+tauPrime(x,tau) = (tau*cos(psi))+((x/c)*sin(psi))
+plot3d(tauPrime, (x, -4, 4), (tau, 0, 200))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_3" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_3">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_3">
+                            <div class="cell_output_print_wrap" id="cell_output_3">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_3">
+                                    
+<div id="sage_jmol_3" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_3" style="display:none;">500</div>
+    <div id="sage_jmol_img_3" style="display:none;">/home/admin/0/cells/3/.jmol_images/sage0-size500.jmol.png?1436246374.03</div>
+    <div id="sage_jmol_script_3" style="display:none;">/home/admin/0/cells/3/sage0-size500.jmol?1436246374.03</div>
+    <div id="sage_jmol_server_url_3" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_3" style="display:none;">Activated</div>
+<div id="jmolApplet1" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet1_wrapper" style="height:100%;width:100%;"><div id="jmolApplet1_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet1_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet1_coverimage" src="/assets/sage0-size500.jmol(1).png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet1, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet1_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet1, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet1_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet1_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet1_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet1_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet1_infoheaderspan"></span><span id="jmolApplet1_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet1,false)">[x]</a></span></div><div id="jmolApplet1_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_5" class="cell_visible">
+    <div id="cell_5" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black">'''
+Gabor function without time which can plot firing response in relation to space, angles in degrees of x and y comprise space
+(Dayan and Abbott, pg 63)
+'''
+sigX = 1
+sigY = 2
+k = 1/.56
+psi = 0
+gabor(x,y) = (1/(2*pi*sigX*sigY))*exp(-(x^2/(2*sigX^2))-(y^2/(2*sigY^2)))*cos(k*x-psi)
+plot3d(gabor*(.002), (x, -4, 4), (y, -5, 5))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_5" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_5">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_5">
+                            <div class="cell_output_print_wrap" id="cell_output_5">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_5">
+                                    
+<div id="sage_jmol_5" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_5" style="display:none;">500</div>
+    <div id="sage_jmol_img_5" style="display:none;">/home/admin/0/cells/5/.jmol_images/sage0-size500.jmol.png?1436246377.41</div>
+    <div id="sage_jmol_script_5" style="display:none;">/home/admin/0/cells/5/sage0-size500.jmol?1436246377.41</div>
+    <div id="sage_jmol_server_url_5" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_5" style="display:none;">Activated</div>
+<div id="jmolApplet2" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet2_wrapper" style="height:100%;width:100%;"><div id="jmolApplet2_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet2_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet2_coverimage" src="/assets/sage0-size500.jmol(2).png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet2, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet2_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet2, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet2_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet2_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet2_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet2_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet2_infoheaderspan"></span><span id="jmolApplet2_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet2,false)">[x]</a></span></div><div id="jmolApplet2_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_6" class="cell_visible">
+    <div id="cell_6" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black">'''
+Gabor with time included as a non-seperable space-time receptive field
+Different time points shown below correspond to the animated plot shown in
+the beginning of this worksheet.
+'''
+# time 0
+tau = 0
+gaborWithTime = gabor(xPrime(x,tau),y)*timeWithPrime(x,tau)
+plot3d(gaborWithTime, (x, -4, 4), (y, -5, 5))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_6" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_6">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_6">
+                            <div class="cell_output_print_wrap" id="cell_output_6">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_6">
+                                    
+<div id="sage_jmol_6" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_6" style="display:none;">500</div>
+    <div id="sage_jmol_img_6" style="display:none;">/home/admin/0/cells/6/.jmol_images/sage0-size500.jmol.png?1436246610.05</div>
+    <div id="sage_jmol_script_6" style="display:none;">/home/admin/0/cells/6/sage0-size500.jmol?1436246610.05</div>
+    <div id="sage_jmol_server_url_6" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_6" style="display:none;">Activated</div>
+<div id="jmolApplet3" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet3_wrapper" style="height:100%;width:100%;"><div id="jmolApplet3_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet3_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet3_coverimage" src="/assets/sage0-size500.jmol(3).png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet3, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet3_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet3, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet3_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet3_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet3_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet3_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet3_infoheaderspan"></span><span id="jmolApplet3_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet3,false)">[x]</a></span></div><div id="jmolApplet3_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_14" class="cell_visible">
+    <div id="cell_14" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black"># time 25
+tau = 25
+gaborWithTime = gabor(xPrime(x,tau),y)*timeWithPrime(x,tau)
+plot3d(gaborWithTime, (x, -4, 4), (y, -5, 5))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_14" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_14">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_14">
+                            <div class="cell_output_print_wrap" id="cell_output_14">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_14">
+                                    
+<div id="sage_jmol_14" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_14" style="display:none;">500</div>
+    <div id="sage_jmol_img_14" style="display:none;">/home/admin/0/cells/14/.jmol_images/sage0-size500.jmol.png?1436246430.38</div>
+    <div id="sage_jmol_script_14" style="display:none;">/home/admin/0/cells/14/sage0-size500.jmol?1436246430.38</div>
+    <div id="sage_jmol_server_url_14" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_14" style="display:none;">Activated</div>
+<div id="jmolApplet4" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet4_wrapper" style="height:100%;width:100%;"><div id="jmolApplet4_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet4_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet4_coverimage" src="/assets/sage0-size500.jmol(4).png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet4, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet4_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet4, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet4_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet4_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet4_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet4_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet4_infoheaderspan"></span><span id="jmolApplet4_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet4,false)">[x]</a></span></div><div id="jmolApplet4_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_7" class="cell_visible">
+    <div id="cell_7" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black"># time 50
+tau = 50
+gaborWithTime = gabor(xPrime(x,tau),y)*timeWithPrime(x,tau)
+plot3d(gaborWithTime, (x, -4, 4), (y, -5, 5))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_7" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_7">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_7">
+                            <div class="cell_output_print_wrap" id="cell_output_7">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_7">
+                                    
+<div id="sage_jmol_7" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_7" style="display:none;">500</div>
+    <div id="sage_jmol_img_7" style="display:none;">/home/admin/0/cells/7/.jmol_images/sage0-size500.jmol.png?1436246441.69</div>
+    <div id="sage_jmol_script_7" style="display:none;">/home/admin/0/cells/7/sage0-size500.jmol?1436246441.69</div>
+    <div id="sage_jmol_server_url_7" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_7" style="display:none;">Activated</div>
+<div id="jmolApplet5" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet5_wrapper" style="height:100%;width:100%;"><div id="jmolApplet5_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet5_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet5_coverimage" src="/assets/sage0-size500.jmol(5).png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet5, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet5_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet5, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet5_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet5_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet5_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet5_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet5_infoheaderspan"></span><span id="jmolApplet5_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet5,false)">[x]</a></span></div><div id="jmolApplet5_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_8" class="cell_visible">
+    <div id="cell_8" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black"># time 100
+tau = 100
+gaborWithTime = gabor(xPrime(x,tau),y)*timeWithPrime(x,tau)
+plot3d(gaborWithTime, (x, -4, 4), (y, -5, 5))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_8" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_8">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_8">
+                            <div class="cell_output_print_wrap" id="cell_output_8">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_8">
+                                    
+<div id="sage_jmol_8" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_8" style="display:none;">500</div>
+    <div id="sage_jmol_img_8" style="display:none;">/home/admin/0/cells/8/.jmol_images/sage0-size500.jmol.png?1436246449.43</div>
+    <div id="sage_jmol_script_8" style="display:none;">/home/admin/0/cells/8/sage0-size500.jmol?1436246449.43</div>
+    <div id="sage_jmol_server_url_8" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_8" style="display:none;">Activated</div>
+<div id="jmolApplet6" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet6_wrapper" style="height:100%;width:100%;"><div id="jmolApplet6_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet6_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet6_coverimage" src="/assets/sage0-size500.jmol(6).png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet6, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet6_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet6, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet6_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet6_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet6_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet6_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet6_infoheaderspan"></span><span id="jmolApplet6_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet6,false)">[x]</a></span></div><div id="jmolApplet6_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_9" class="cell_visible">
+    <div id="cell_9" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black"># time 150
+tau = 150
+gaborWithTime = gabor(xPrime(x,tau),y)*timeWithPrime(x,tau)
+plot3d(gaborWithTime, (x, -4, 4), (y, -5, 5))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_9" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_9">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_9">
+                            <div class="cell_output_print_wrap" id="cell_output_9">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_9">
+                                    
+<div id="sage_jmol_9" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_9" style="display:none;">500</div>
+    <div id="sage_jmol_img_9" style="display:none;">/home/admin/0/cells/9/.jmol_images/sage0-size500.jmol.png?1436246457.28</div>
+    <div id="sage_jmol_script_9" style="display:none;">/home/admin/0/cells/9/sage0-size500.jmol?1436246457.28</div>
+    <div id="sage_jmol_server_url_9" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_9" style="display:none;">Activated</div>
+<div id="jmolApplet7" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet7_wrapper" style="height:100%;width:100%;"><div id="jmolApplet7_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet7_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet7_coverimage" src="/assets/sage0-size500.jmol(7).png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet7, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet7_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet7, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet7_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet7_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet7_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet7_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet7_infoheaderspan"></span><span id="jmolApplet7_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet7,false)">[x]</a></span></div><div id="jmolApplet7_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_10" class="cell_visible">
+    <div id="cell_10" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <pre class="shrunk"><font color="black"># time 200
+tau = 200
+gaborWithTime = gabor(xPrime(x,tau),y)*timeWithPrime(x,tau)
+plot3d(gaborWithTime, (x, -4, 4), (y, -5, 5))&nbsp;</font></div>
+            
+            
+
+            <div id="introspect_div_10" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_10">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_10">
+                            <div class="cell_output_print_wrap" id="cell_output_10">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_10">
+                                    
+<div id="sage_jmol_10" class="3DPlotDiv">
+    
+    <div id="sage_jmol_size_10" style="display:none;">500</div>
+    <div id="sage_jmol_img_10" style="display:none;">/home/admin/0/cells/10/.jmol_images/sage0-size500.jmol.png?1436246467.0</div>
+    <div id="sage_jmol_script_10" style="display:none;">/home/admin/0/cells/10/sage0-size500.jmol?1436246467.0</div>
+    <div id="sage_jmol_server_url_10" style="display:none;">/home/admin/0/jsmol</div>
+    <div id="sage_jmol_status_10" style="display:none;">Activated</div>
+<div id="jmolApplet8" style="height:500px; width:500px;" class="ui-resizable"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div id="jmolApplet8_wrapper" style="height:100%;width:100%;"><div id="jmolApplet8_appletinfotablediv" style="width:95%;height:95%;position:relative;font-size:14px;text-align:left"><div id="jmolApplet8_coverdiv" style="background-color:red;z-index:11;width:100%;height:100%;display:inline;position:absolute;top:0px;left:0px"><img id="jmolApplet8_coverimage" src="/assets/sage0-size500.jmol(8).png" style="width:100%;height:100%" onclick="Jmol.coverApplet(jmolApplet8, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."><img id="jmolApplet8_coverclickgo" src="/assets/play_make_live.jpg" style="width:25px;height:25px;position:absolute;bottom:10px;left:10px;z-index:11;opacity:0.5;" onclick="Jmol.coverApplet(jmolApplet8, false)" title="Click on 3-D image to make it live. Right-click on live image for a control menu."></div><div id="jmolApplet8_appletdiv" style="z-index:5;width:100%;height:100%;position:absolute;top:0px;left:0px;"></div><div id="jmolApplet8_2dappletdiv" style="position:absolute;width:100%;height:100%;overflow:hidden;display:none"></div><div id="jmolApplet8_infotablediv" style="width:100%;height:100%;position:absolute;top:0px;left:0px"><div id="jmolApplet8_infoheaderdiv" style="height:20px;width:100%;background:yellow;display:none"><span id="jmolApplet8_infoheaderspan"></span><span id="jmolApplet8_infocheckboxspan" style="position:absolute;text-align:right;right:1px;"><a href="javascript:Jmol.showInfo(jmolApplet8,false)">[x]</a></span></div><div id="jmolApplet8_infodiv" style="position:absolute;top:20px;bottom:0px;width:100%;height:100%;overflow:auto"></div></div></div></div></div></div>
+
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+<div id="cell_outer_23" class="cell_visible">
+    <div id="cell_23" class="cell_evaluated">
+            <div id="introspect_div_23" class="introspection"></div>
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_23">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_23">
+                            <div class="cell_output_print_wrap" id="cell_output_23">
+                                
+                                    <pre class="shrunk"><font color="black">Reference:
+    
+Dayan, Peter, and Laurence F. Abbott. Theoretical neuroscience. Vol. 806. Cambridge, MA: MIT Press, 2001.</font></pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_23">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+</div>
+<!--    <script>
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </script>-->
+
+    
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size4, sans-serif;"></div></div><iframe id="rdbIndicator" width="100%" height="270" border="0" src="/assets/indicator.html" style="display: none; border: 0; position: fixed; left: 0; top: 0; z-index: 2147483647"></iframe></body><style id="stylish-3" class="stylish" type="text/css">/* Night Owl Browsing Userscript by Mishihime */
+
+/* selection and moz-selection control highlighted text colors works in chrome firefox safari not ie */
+::selection {
+background:#000 !important ;
+}
+
+::-moz-selection  {
+background:#000 !important ;
+}
+
+body, p, td, tr, th, li, font, label, cite, blockquote, div, class, span {
+
+}
+
+a {
+
+}
+
+a:hover {
+
+}
+
+h1, h2, h3, h4, h5, h6, b, strong, em {
+
+}
+
+blockquote, pre {
+border : solid !important ;
+border-color : #222 !important ;
+}
+
+div#ask {
+border : solid !important ;
+border-color : #222 !important ;
+}
+
+body, tbody, span, div, table, tr, th, td, ul, li, h1, h2, h3, h4, h5, h6, dd, dt, dl, p, fieldset, form, blockquote, a, footer, header, nav, section, pre {
+background-image : none !important ;
+}
+
+body, tbody, span, div, table, tr, th, td, ul, li, h1, h2, h3, h4, h5, h6, dd, dt, dl, p, fieldset, form, blockquote, a, footer, header, nav, section, pre {
+text-align: left;
+border-color : #1C1C1C !important ;
+box-shadow: none !important;
+text-shadow : none !important ;
+}
+
+/* remove the opacity line if you do not want darkened images */
+img {
+border-style:solid  !important ;
+border:1px  !important ;
+border-color: #1C1C1C !important ;
+}
+
+
+
+hr {
+display : none !important ;
+}
+
+/* i really want this to be global */</style></html>
