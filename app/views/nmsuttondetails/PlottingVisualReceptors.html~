@@ -203,7 +203,7 @@ conversion of 2d to 3d graphics.  <b>Self organizing maps (SOM)</b> were impleme
 in the plotting, neighbor verticies are pulled with each movement of verticies.  The use of SOM was inspired by a 
 <a target="_blank" href="https://class.coursera.org/compneuro-003/lecture/77" style="color: rgb(0,0,200)">Comp Neuro Coursera video (timepoint 9:30)</a>.  <b>Custom openGL C++ 3d graphics</b> code has been created.
 This is a Sage workbook.  <a target="_blank" href="http://nmsutton.heroku.com" style="color: rgb(0,0,200)">My site</a>.
-<br><font size="10">2D: </font><iframe width="640" height="480" src="https://www.youtube.com/embed/aroTCo1o_L8" frameborder="0" allowfullscreen=""></iframe><font size="10"> 3D: </font><iframe width="640" height="480" src="https://www.youtube.com/embed/zzr2qXk4yqU" frameborder="0" allowfullscreen=""></iframe>
+<br><font size="10">2D: </font><iframe width="640" height="480" src="https://www.youtube.com/embed/ui-auHfvOJY" frameborder="0" allowfullscreen=""></iframe><font size="10"> 3D: </font><iframe width="640" height="480" src="https://www.youtube.com/embed/zzr2qXk4yqU" frameborder="0" allowfullscreen=""></iframe>
 <br><center><font size="6"><u>Spatial Receptive Fields of LGN Visual Receptors</u></font></center> 
 <br>The difference of gaussians math method was used for the simulation (Dayan and Abbott, pg 77).
 <br>More details on the LGN simulation past the gabor section below.
